@@ -16,3 +16,6 @@
 |[1006](PAT_Bundles/1006.cpp)|Sign in and Sign out(25)|元素查找|
 |[1007](PAT_Bundles/1007.cpp)|Emergency(25)|动态规划，最大连续子序列和|
 |[1008](PAT_Bundles/1008.cpp)|Elevator(20)|数学问题|
+|[1019](PAT_Bundles/1019.md)|General Palindromic Number(20)|一般回文数，数学问题|
+|[1020](PAT_Bundles/1020.md)|Tree Traversals(25)|二叉树的遍历，前序/后序/中序/层序|
+|[1070](PAT_Bundles/1070.md)|mooncake(25)|贪婪算法|
