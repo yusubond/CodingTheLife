@@ -1,17 +1,3 @@
-## Public Bike Management(25)
-
-![1018](image/1018_1.png)
-![1018](image/1018_2.png)
-
-题意：对于每一个自行车车站，其容量是一个偶数Cmax。如果车站的自行车数量刚好是其总容量的1/2，视为完美状态。**如果车站为满或者空状态，控制中心PBMC（视为0）将会携带或从路上收集一定数量的自行车前往该车站站，并且将沿途所经车站均调整为完美状态。**（这就程序的最终目标）**如果路径不唯一，则选取从车站携带数量最少的一条路径**。给出容量Cmax，车站数量N，目标车站Sp，M条边及其权值（距离值），求最短路径。**如果最短路径有多条，则选择从车站带回自行车数量最少的那一条。**
-
-分析：使用Dijkstra算法和DFS深度优先搜索算法。因为只有Dijkstra算法是不可以的，因为minNeed和minBack不满足最优子结构，不是简单的相加过程，只有在所有的路径确定了之后，才能区分最小的Need和最小的Back。因此，使用Dijkstra算法求最短路径，使用DFS求最小的Need，最小的Back和Path。
-
-DFS模拟一遍路径需要调整的问题，记录的最后的Need和Back，并与minNeed和minBack比较，根据情况更新Path，最后输出minNeed，minBack和Path。
-
-c++代码：
-
-```
 #include<cstdio>
 #include<vector>
 #include<algorithm>
@@ -108,4 +94,3 @@ int main() {
   printf(" %", minBack);
   return 0;
 }
-```
