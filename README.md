@@ -16,6 +16,8 @@
 |[1006](PAT_Bundles/1006.cpp)|Sign in and Sign out(25)|元素查找|
 |[1007](PAT_Bundles/1007.cpp)|Emergency(25)|动态规划，最大连续子序列和|
 |[1008](PAT_Bundles/1008.cpp)|Elevator(20)|数学问题|
+|[1015](PAT_Bundles/1015.md)|Reversible Primes(20)|可逆素数判断，进制转换，素数判断|
+|[1016](PAT_Bundles/1016.md)|Phone Bills(25)|数学问题，结构体，字符串，时间问题，待整理|
 |[1017](PAT_Bundles/1017.md)|Queueing at Bank(25)|排队问题，等待时间，时间的存储及比较|
 |[1018](PAT_Bundles/1018.md)|Public Bike Management(25)|最短路径问题，Dijkstra算法，DFS算法|
 |[1019](PAT_Bundles/1019.md)|General Palindromic Number(20)|一般回文数，数学问题|
