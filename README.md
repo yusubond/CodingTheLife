@@ -8,14 +8,18 @@
 
 |Id|Title|Description|
 |:---:|:---|:---|
-|[1001](PAT_Bundles/1001.cpp)|A+B Format(20)|标准输入输出|
-|[1002](PAT_Bundles/1002.cpp)|A+B for Polynomials(25)|**|
+|[1001](PAT_Bundles/cppfiles/1001.cpp)|A+B Format(20)|标准输入输出|
+|[1002](PAT_Bundles/cppfiles/1002.cpp)|A+B for Polynomials(25)|**|
 |[1003](PAT_Bundles/1003.md)|Emergency(25)|图论，求最短路径，Dijkstra搜索|
 |[1004](PAT_Bundles/1004.md)|Counting Leaves(30)|树的遍历，深度优先与广度优先，DFS,BFS|
-|[1005](PAT_Bundles/1005.cpp)|Spell it Right(20)|数值的字符串处理|
-|[1006](PAT_Bundles/1006.cpp)|Sign in and Sign out(25)|元素查找|
-|[1007](PAT_Bundles/1007.cpp)|Emergency(25)|动态规划，最大连续子序列和|
-|[1008](PAT_Bundles/1008.cpp)|Elevator(20)|数学问题|
+|[1005](PAT_Bundles/cppfiles/1005.cpp)|Spell it Right(20)|数值的字符串处理|
+|[1006](PAT_Bundles/cppfiles/1006.cpp)|Sign in and Sign out(25)|元素查找|
+|[1007](PAT_Bundles/cppfiles/1007.cpp)|Emergency(25)|动态规划，最大连续子序列和|
+|[1008](PAT_Bundles/cppfiles/1008.cpp)|Elevator(20)|数学问题|
+|[1009](PAT_Bundles/cppfiles/1009.cpp)|Product of Polynomials(25)|模拟|
+|[1010](PAT_Bundles/cppfiles/1010.cpp)|Radix(25)|模拟|
+|[1011](PAT_Bundles/cppfiles/1011.cpp)|World Cup Betting(20)|模拟|
+|[1012](PAT_Bundles/1012.md)|The Best Rank(25)|数字排序，三门功课，四个排名|
 |[1013](PAT_Bundles/1013.md)|Battle Over Cities(25)|图论，连通分量，dfs|
 |[1014](PAT_Bundles/1014.md)|Waiting in Line(30)|queue的应用，时间问题，排队问题|
 |[1015](PAT_Bundles/1015.md)|Reversible Primes(20)|可逆素数判断，进制转换，素数判断|
