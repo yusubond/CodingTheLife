@@ -5,7 +5,7 @@
 19 5  
 scanf("%d %d", &a, &b);
 
-08:02:04
+08:02:04  
 scanf("%d:%d:%d", &HH, &MM, &SS);
 
 ### 2)常用的排序算法
@@ -25,7 +25,7 @@ sort(begin, end, cmp)
 
 c++代码：已知前序和中序，转为后序
 
-```
+```c++
 #include <vector>
 vector<int> pre, in, post;
 void pre2post(int root, int start, int end) {
@@ -51,7 +51,7 @@ void pre2post(int root, int start, int end) {
 
 c++代码：已知后序和中序，转为前序
 
-```
+```c++
 #include <vector>
 vector<int> pre, in, post;
 void post2pre(int root, int start, int end) {
