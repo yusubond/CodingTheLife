@@ -25,3 +25,10 @@
 |[1019](PAT_Bundles/1019.md)|General Palindromic Number(20)|一般回文数，数学问题|
 |[1020](PAT_Bundles/1020.md)|Tree Traversals(25)|二叉树的遍历，前序/后序/中序/层序|
 |[1070](PAT_Bundles/1070.md)|mooncake(25)|贪婪算法|
+|[1081](PAT_Bundles/1081.md)|Rational Sum(20)|分数的四则运算，最大公约数，约分|
+|[1082](PAT_Bundles/1082.md)|Read Number in Chinese(25)|数学问题|
+|[1083](PAT_Bundles/1083.md)|List Grades(25)|排序,vector应用，char处理|
+|[1084](PAT_Bundles/1084.md)|Broken Keyboard(20)|字符串处理，Hash散列|
+|[1085](PAT_Bundles/1085.md)|Perfect Sequence(25)|排序，动态规划|
+
++ [复习专用](notice.md)
