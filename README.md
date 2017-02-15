@@ -34,5 +34,6 @@
 |[1083](PAT_Bundles/1083.md)|List Grades(25)|排序,vector应用，char处理|
 |[1084](PAT_Bundles/1084.md)|Broken Keyboard(20)|字符串处理，Hash散列|
 |[1085](PAT_Bundles/1085.md)|Perfect Sequence(25)|排序，动态规划|
+|[1086](PAT_Bundles/1086.md)|Tree Traversals Again(25)|二叉树的遍历，栈的应用|
 
 + [复习专用](notice.md)
