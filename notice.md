@@ -84,3 +84,5 @@ string a;
 cin >> a;
 int lena = a.length();
 ```
+
+### 6)递归函数及其思想
