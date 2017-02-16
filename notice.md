@@ -71,3 +71,16 @@ void post2pre(int root, int start, int end) {
   post2pre(n - 1, 0, n - 1);
   //顺序输出pre，即是前序序列
 ```
+
+### 5)字符串长度
+
+对于字符串长度，使用其成员函数输出。需要包含头文件`#include <cstring>`。
+
+```c++
+#include <iostream>
+#include <cstring>
+using namespace std;
+string a;
+cin >> a;
+int lena = a.length();
+```

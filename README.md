@@ -35,5 +35,8 @@
 |[1084](PAT_Bundles/1084.md)|Broken Keyboard(20)|字符串处理，Hash散列|
 |[1085](PAT_Bundles/1085.md)|Perfect Sequence(25)|排序，动态规划|
 |[1086](PAT_Bundles/1086.md)|Tree Traversals Again(25)|二叉树的遍历，栈的应用|
+|[1092](PAT_Bundles/1092.md)|To Buy or Not to Buy(20)|字符串处理，string应用|
+|[1094](PAT_Bundles/1094.md)|The Largest Generation(25)|树的遍历，DFS|
+|[1099](PAT_Bundles/1099.md)|Build A Binary Search Tree(30)|二叉搜索树，值序(左<根<右),中序遍历|
 
 + [复习专用](notice.md)
