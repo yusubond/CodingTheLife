@@ -28,6 +28,7 @@
 |[1018](PAT_Bundles/1018.md)|Public Bike Management(25)|最短路径问题，Dijkstra算法，DFS算法|
 |[1019](PAT_Bundles/1019.md)|General Palindromic Number(20)|一般回文数，数学问题|
 |[1020](PAT_Bundles/1020.md)|Tree Traversals(25)|二叉树的遍历，前序/后序/中序/层序|
+|[1027](PAT_Bundles/1027.md)|Colors in Mars(20)|进制转换|
 |[1070](PAT_Bundles/1070.md)|mooncake(25)|贪婪算法|
 |[1081](PAT_Bundles/1081.md)|Rational Sum(20)|分数的四则运算，最大公约数，约分|
 |[1082](PAT_Bundles/1082.md)|Read Number in Chinese(25)|数学问题|

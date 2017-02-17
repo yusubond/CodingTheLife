@@ -12,7 +12,15 @@ scanf("%d:%d:%d", &HH, &MM, &SS);
 
 `#include <algorithm>`
 
-sort函数：对指定区间的所有元素进行排序。结合vector使用，例如sort(vector.begin(), vector.end(), cmp)
+sort函数：对指定区间的所有元素进行排序。结合vector使用，例如sort(vector.begin(), vector.end(), cmp)。sort函数默认对整型数据进行升序排列。
+
+```c++
+#include <algorithm>
+#include <vector>
+using namespace std;
+bool cmp1(int a, int b) {
+  return a > b;  //降序   return a < b则为升序
+}
 
 sort(begin, end)
 sort(begin, end, cmp)
