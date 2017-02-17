@@ -29,6 +29,10 @@
 |[1019](PAT_Bundles/1019.md)|General Palindromic Number(20)|一般回文数，数学问题|
 |[1020](PAT_Bundles/1020.md)|Tree Traversals(25)|二叉树的遍历，前序/后序/中序/层序|
 |[1027](PAT_Bundles/1027.md)|Colors in Mars(20)|进制转换|
+|[1036](PAT_Bundles/1036.md)|Boys vs Girls(20)|排序，结构体，字符串，vector|
+|[1042](PAT_Bundles/1042.md)|Shuffling Machine(20)|花色变换，数字处理|
+|[1058](PAT_Bundles/1058.md)|A + B in Hogwarts(20)|数学问题，进位|
+|[1066](PAT_Bundles/1066.md)|Root of AVL Tree(25)|二叉搜索树的建立，旋转以及获取深度|
 |[1070](PAT_Bundles/1070.md)|mooncake(25)|贪婪算法|
 |[1081](PAT_Bundles/1081.md)|Rational Sum(20)|分数的四则运算，最大公约数，约分|
 |[1082](PAT_Bundles/1082.md)|Read Number in Chinese(25)|数学问题|
@@ -41,6 +45,7 @@
 |[1099](PAT_Bundles/1099.md)|Build A Binary Search Tree(30)|二叉搜索树，值序(左<根<右),中序遍历|
 |[1102](PAT_Bundles/1102.md)|Invert a Binary Tree(25)|树的遍历，队列广度优先搜索，中序序列处理|
 |[1113](PAT_Bundles/1113.md)|Integer Set Partition(25)|排序，求和|
+|[1115](PAT_Bundles/1115.md)|Counting Nodes in a BST(30)|二叉搜索树，深度优先遍历，递归构建|
 |[1120](PAT_Bundles/1120.md)|Friend Numbers(20)|数字问题，位求和，set应用|
 |[1123](PAT_Bundles/1123.md)|Is it a Complete AVL Tree(30)|AVL树，平衡二叉搜索树，层序遍历，旋转|
 
