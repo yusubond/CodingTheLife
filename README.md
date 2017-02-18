@@ -29,8 +29,10 @@
 |[1019](PAT_Bundles/1019.md)|General Palindromic Number(20)|一般回文数，数学问题|
 |[1020](PAT_Bundles/1020.md)|Tree Traversals(25)|二叉树的遍历，前序/后序/中序/层序|
 |[1027](PAT_Bundles/1027.md)|Colors in Mars(20)|进制转换|
+|[1030](PAT_Bundles/1030.md)|Travel Plan(30)|图论，最短路径，Dijkstra算法，DFS算法|
 |[1036](PAT_Bundles/1036.md)|Boys vs Girls(20)|排序，结构体，字符串，vector|
 |[1042](PAT_Bundles/1042.md)|Shuffling Machine(20)|花色变换，数字处理|
+|[1050](PAT_Bundles/1050.md)|String Substraction(20)|字符串处理，Hash散列|
 |[1058](PAT_Bundles/1058.md)|A + B in Hogwarts(20)|数学问题，进位|
 |[1066](PAT_Bundles/1066.md)|Root of AVL Tree(25)|二叉搜索树的建立，旋转以及获取深度|
 |[1070](PAT_Bundles/1070.md)|mooncake(25)|贪婪算法|

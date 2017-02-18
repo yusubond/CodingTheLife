@@ -94,3 +94,131 @@ int lena = a.length();
 ```
 
 ### 6)递归函数及其思想
+
+### 7)最短路径，Dijkstra算法
+
+1) 利用容器存放路径信息，并保存在pre数组(其类型为vector<int>)中。**pre[i]** 中i表示当前结点，pre[i]中的值表示前一结点。因为，最短路径可以不唯一，利用vector可以保存多条路径。
+
+2) dis[n]表示当前结点距离起点的距离。visit[n]数组，表示每个结点的遍历情况。
+
+3) 利用对称矩阵e(n*n)，保存边的信息。
+
+4）Dijkstra算法的思想：先找起点，然后寻找未经过的下一结点。
+
+```c++
+#include <cstido>
+#include <vector>
+#include <algorithm>
+const int inf = 99999999;
+int e[n][n], dis[n];
+bool visit[n] = {false};
+vector<int> pre[n];
+//s表示起点坐标
+int main() {
+  fill(e, e + n * n, inf);
+  fill(dis, dis + n);
+  dis[s] = 0;
+  for(int i = 0; i < n; i++) {
+    int u = -1, minn = inf;
+    for(int j = 0; j < n; j++) {
+      if(visit[j] == false && dis[j] < minn) {
+        u = j;  //起点，前一结点
+        minn = j;
+      }
+    }
+    if(u == -1) break;
+    visit[u] = true;
+    //下一结点
+    for(int v = 0; v < n; v++) {
+      if(visit[v] == false && e[u][v] != inf) {
+        if(dis[u] + e[u][v] < dis[v]) {
+          dis[v] = dis[u] + e[u][v];
+          pre[v].clear();
+          pre[v].push_back(u);
+        } else if(dis[u] + e[u][v] == dis[v]) {
+          pre[v].push_back(u);
+        }
+      }
+    }
+  }
+}
+```
+
+### 8）深度优先搜索，使用vector
+
+使用vector对象时，利用v数组(vector<int> v[n],n为结点个数)保存结点信息（前一结点或下一结点）。针对不同的数据结构，其终止条件不一样。如下所示：
+
+1）如果数据结构是树类型。算法起点为 **根结点root**，终点为 **叶子结点**。常用于计算树的深度，每层的结点个数。
+
+```c++
+//此种情况，不用区分左右子树
+#include <cstdio>
+#include <vector>
+#include <algorithm>
+using namespace std;
+vector<int> v[n];
+vector<int> book[n];
+int maxdepth = -1;
+void DFS(int index, int depth) {
+  //index为根结点所在坐标
+  if(v[index].size() == 0) {  //叶子结点
+    book[depth]++;
+    maxdepth = max(depth, maxdepth);
+    return ;
+  } else {
+    for(int i = 0; i < v[index].size(); i++) {
+      DFS(v[index][i], depth + 1);
+    }
+  }
+}
+```
+2）同样也是树类型，区分左右子树时。
+
+3）结合图论知识，找出路径问题。**对于每一条路径，其包含起点和终点**。因此，可以使用vector数组来保存路径信息。需要注意的是，**v数组中保存的是前一结点，还是下一结点，决定其输出顺序**。
+
+```c++
+//此程序参照 1018题
+#include <cstdio>
+#include <vector>
+vector<int> pre[n];  //pre表示满足最短路径的条件下，当前结点的前一结点信息（形成树，供dfs使用）
+vector<int> path, temppath;
+void dfs(int v) {  //传入目标结点，即终点
+  if(v == 0) {  //结束条件为，找到起点，即一条完整的路径。那么，关于路径上的计算问题，均在此处理
+    temppath.push_back(v);
+    int need = 0, back = 0;
+    //求取路径的need和back
+    for(int i = temppath.size() - 1; i >= 0; i--) {
+      int id = temppath[i];
+      if(weight[id] > 0) {  //车辆多余，需要带回
+        back += weight[id];
+      }
+      else {  //车辆不足需要补充
+        if(back > (0 - weight[id])) {  //用back补充不足车辆
+          back += weight[id];
+        } else { //需要携带补充
+          need += ((0 - weight) - back);
+          back = 0;   //back清零
+        }
+      }
+    }
+    //判断need和back
+    if(need < minNeed) {
+      minNeed = need;
+      minBack = back;
+      path = temppath;
+    }
+    else if(need == minNeed && back < minBack) {
+      minBack = back;
+      path = temppath;
+    }
+    temppath.pop_back();
+    return ;
+  }
+  temppath.push_back(v);
+  for(int i = 0; i < pre[v].size(); i++)  //因为最短路径可能不唯一，逐一使用dfs算法，并递归
+    dfs(pre[v][i]);
+  temppath.pop_back();
+}
+```
+
+### 9）广度优先搜索
