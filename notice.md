@@ -1,4 +1,4 @@
-## 需要注意的地方
+## 知识点总结
 
 ### 1)数据存储
 
@@ -27,8 +27,12 @@ sort(begin, end, cmp)
 
 ### 3)vector的用法
 
-`#include <vector>`
-
+```c++
+#include <vector>
+vector<int> path;
+//重新更改大小
+path.resize(n);
+```
 ### 4)图的遍历，比较 **前序和中序转后序** 与 **后序和中序转前序** 的区别
 
 c++代码：已知前序和中序，转为后序

@@ -1,6 +1,7 @@
 # PAT训练集
 
 + [PAT甲级训练集](PAT_Bundles)
++ [知识点总结](notice.md)
 
 ## PAT甲级训练集
 
@@ -50,5 +51,3 @@
 |[1115](PAT_Bundles/1115.md)|Counting Nodes in a BST(30)|二叉搜索树，深度优先遍历，递归构建|
 |[1120](PAT_Bundles/1120.md)|Friend Numbers(20)|数字问题，位求和，set应用|
 |[1123](PAT_Bundles/1123.md)|Is it a Complete AVL Tree(30)|AVL树，平衡二叉搜索树，层序遍历，旋转|
-
-+ [复习专用](notice.md)
