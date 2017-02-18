@@ -34,6 +34,7 @@
 |[1036](PAT_Bundles/1036.md)|Boys vs Girls(20)|排序，结构体，字符串，vector|
 |[1042](PAT_Bundles/1042.md)|Shuffling Machine(20)|花色变换，数字处理|
 |[1050](PAT_Bundles/1050.md)|String Substraction(20)|字符串处理，Hash散列|
+|[1053](PAT_Bundles/1053.md)|Path of Equal Weight(30)|树的遍历，DFS并输出，vector|
 |[1058](PAT_Bundles/1058.md)|A + B in Hogwarts(20)|数学问题，进位|
 |[1066](PAT_Bundles/1066.md)|Root of AVL Tree(25)|二叉搜索树的建立，旋转以及获取深度|
 |[1070](PAT_Bundles/1070.md)|mooncake(25)|贪婪算法|
@@ -47,7 +48,10 @@
 |[1094](PAT_Bundles/1094.md)|The Largest Generation(25)|树的遍历，DFS|
 |[1099](PAT_Bundles/1099.md)|Build A Binary Search Tree(30)|二叉搜索树，值序(左<根<右),中序遍历|
 |[1102](PAT_Bundles/1102.md)|Invert a Binary Tree(25)|树的遍历，队列广度优先搜索，中序序列处理|
+|[1104](PAT_Bundles/1104.md)|Sum of Number Segments(20)|子序列求和，数学问题|
+|[1108](PAT_Bundles/1108.md)|Finding Average(20)|字符串处理，sscanf,sprintf|
 |[1113](PAT_Bundles/1113.md)|Integer Set Partition(25)|排序，求和|
+|[1116](PAT_Bundles/1116.md)|Come on! Let's C(20)|set的应用，素数判断|
 |[1115](PAT_Bundles/1115.md)|Counting Nodes in a BST(30)|二叉搜索树，深度优先遍历，递归构建|
 |[1120](PAT_Bundles/1120.md)|Friend Numbers(20)|数字问题，位求和，set应用|
 |[1123](PAT_Bundles/1123.md)|Is it a Complete AVL Tree(30)|AVL树，平衡二叉搜索树，层序遍历，旋转|
