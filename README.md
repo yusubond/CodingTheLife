@@ -50,6 +50,8 @@
 |[1101](PAT_Bundles/1101.md)|Quick Sort(25)|快速排序，结果逆向考虑|
 |[1102](PAT_Bundles/1102.md)|Invert a Binary Tree(25)|树的遍历，队列广度优先搜索，中序序列处理|
 |[1104](PAT_Bundles/1104.md)|Sum of Number Segments(20)|子序列求和，数学问题|
+|[1105](PAT_Bundles/1105.md)|Spiral Matrix(25)|模拟过程，螺旋矩阵|
+|[1106](PAT_Bundles/1106.md)|Lowest Price in Supply Chain(25)|树的遍历，深度优先搜索，最小深度值|
 |[1108](PAT_Bundles/1108.md)|Finding Average(20)|字符串处理，sscanf,sprintf|
 |[1113](PAT_Bundles/1113.md)|Integer Set Partition(25)|排序，求和|
 |[1116](PAT_Bundles/1116.md)|Come on! Let's C(20)|set的应用，素数判断|
