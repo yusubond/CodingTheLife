@@ -53,6 +53,7 @@
 |[1105](PAT_Bundles/1105.md)|Spiral Matrix(25)|模拟过程，螺旋矩阵|
 |[1106](PAT_Bundles/1106.md)|Lowest Price in Supply Chain(25)|树的遍历，深度优先搜索，最小深度值|
 |[1108](PAT_Bundles/1108.md)|Finding Average(20)|字符串处理，sscanf,sprintf|
+|[1110](PAT_Bundles/1110.md)|Complete Binary Tree(25)|完全二叉树，广度优先搜索，queue应用|
 |[1113](PAT_Bundles/1113.md)|Integer Set Partition(25)|排序，求和|
 |[1116](PAT_Bundles/1116.md)|Come on! Let's C(20)|set的应用，素数判断|
 |[1118](PAT_Bundles/1118.md)|Birds in Forest(25)|并查集，数组的应用|
