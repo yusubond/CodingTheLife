@@ -37,6 +37,7 @@
 |[1042](PAT_Bundles/1042.md)|Shuffling Machine(20)|花色变换，数字处理|
 |[1050](PAT_Bundles/1050.md)|String Substraction(20)|字符串处理，Hash散列|
 |[1053](PAT_Bundles/1053.md)|Path of Equal Weight(30)|树的遍历，DFS并输出，vector|
+|[1056](PAT_Bundles/1056.md)|Mice and Rice(25)|queue应用|
 |[1058](PAT_Bundles/1058.md)|A + B in Hogwarts(20)|数学问题，进位|
 |[1066](PAT_Bundles/1066.md)|Root of AVL Tree(25)|二叉搜索树的建立，旋转以及获取深度|
 |[1070](PAT_Bundles/1070.md)|mooncake(25)|贪婪算法|
@@ -61,6 +62,7 @@
 |[1115](PAT_Bundles/1115.md)|Counting Nodes in a BST(30)|二叉搜索树，深度优先遍历，递归构建|
 |[1116](PAT_Bundles/1116.md)|Come on! Let's C(20)|set的应用，素数判断|
 |[1118](PAT_Bundles/1118.md)|Birds in Forest(25)|并查集，数组的应用|
+|[1119](PAT_Bundles/1119.md)|Pre- and Post-order Traversal|前序后序转中序|
 |[1120](PAT_Bundles/1120.md)|Friend Numbers(20)|数字问题，位求和，set应用|
 |[1121](PAT_Bundles/1121.md)|Damn Single(25)|set的应用|
 |[1123](PAT_Bundles/1123.md)|Is it a Complete AVL Tree(30)|AVL树，平衡二叉搜索树，层序遍历，旋转|
