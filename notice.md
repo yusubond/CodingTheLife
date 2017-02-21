@@ -25,16 +25,6 @@ bool cmp1(int a, int b) {
 sort(begin, end)
 sort(begin, end, cmp)
 
-### 3)vector的用法
-
-```c++
-#include <vector>
-vector<int> path;
-vector<int> couple(m);   //初始化m个
-couple[i] = i + 1; //赋值
-//重新更改大小
-path.resize(n);
-```
 ### 4)图的遍历，比较 **前序和中序转后序** 与 **后序和中序转前序** 的区别
 
 c++代码：已知前序和中序，转为后序

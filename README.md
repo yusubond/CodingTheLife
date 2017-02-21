@@ -2,6 +2,8 @@
 
 + [PAT甲级训练集](PAT_Bundles)
 + [知识点总结](notice.md)
++ [set用法](set_c++.md)
++ [vector](vector_c++.md)
 
 ## PAT甲级训练集
 
