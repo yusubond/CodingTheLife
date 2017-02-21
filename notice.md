@@ -30,6 +30,8 @@ sort(begin, end, cmp)
 ```c++
 #include <vector>
 vector<int> path;
+vector<int> couple(m);   //初始化m个
+couple[i] = i + 1; //赋值
 //重新更改大小
 path.resize(n);
 ```

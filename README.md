@@ -55,8 +55,10 @@
 |[1108](PAT_Bundles/1108.md)|Finding Average(20)|字符串处理，sscanf,sprintf|
 |[1110](PAT_Bundles/1110.md)|Complete Binary Tree(25)|完全二叉树，广度优先搜索，queue应用|
 |[1113](PAT_Bundles/1113.md)|Integer Set Partition(25)|排序，求和|
+|[1114](PAT_Bundles/1114.md)|Family Property(25)|并查集|
+|[1115](PAT_Bundles/1115.md)|Counting Nodes in a BST(30)|二叉搜索树，深度优先遍历，递归构建|
 |[1116](PAT_Bundles/1116.md)|Come on! Let's C(20)|set的应用，素数判断|
 |[1118](PAT_Bundles/1118.md)|Birds in Forest(25)|并查集，数组的应用|
-|[1115](PAT_Bundles/1115.md)|Counting Nodes in a BST(30)|二叉搜索树，深度优先遍历，递归构建|
 |[1120](PAT_Bundles/1120.md)|Friend Numbers(20)|数字问题，位求和，set应用|
+|[1121](PAT_Bundles/1121.md)|Damn Single(25)|set的应用|
 |[1123](PAT_Bundles/1123.md)|Is it a Complete AVL Tree(30)|AVL树，平衡二叉搜索树，层序遍历，旋转|
