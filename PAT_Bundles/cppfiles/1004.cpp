@@ -1,14 +1,10 @@
-//Author: subond
-//Time: 2016-12-17
-
-// 使用DFS(深度优先搜索)
 #include <cstdio>
 #include <vector>
 #include <algorithm>
 using namespace std;
-vector<int> v[100];  //存储具有子节点的当前节点标识和其子节点标识
+vector<int> v[100];
 int book[100], maxdepth = -1;
-void dfs(int index, int depth) {  //传入结点和深度
+void dfs(int index, int depth) {
   if(v[index].size() == 0) {
     book[depth]++;
     maxdepth = max(maxdepth, depth);

@@ -4,6 +4,7 @@
 + [知识点总结](notice.md)
 + [set用法](set_c++.md)
 + [vector](vector_c++.md)
++ [cin](cin_c++.md)
 
 ## PAT甲级训练集
 
@@ -11,8 +12,8 @@
 
 |Id|Title|Description|
 |:---:|:---|:---|
-|[1001](PAT_Bundles/cppfiles/1001.cpp)|A+B Format(20)|标准输入输出|
-|[1002](PAT_Bundles/cppfiles/1002.cpp)|A+B for Polynomials(25)|**|
+|[1001](PAT_Bundles/1001.md)|A+B Format(20)|标准输入输出,字符串处理,数字转字符|
+|[1002](PAT_Bundles/1002.md)|A+B for Polynomials(25)|**|
 |[1003](PAT_Bundles/1003.md)|Emergency(25)|图论，求最短路径，Dijkstra搜索|
 |[1004](PAT_Bundles/1004.md)|Counting Leaves(30)|树的遍历，深度优先与广度优先，DFS,BFS|
 |[1005](PAT_Bundles/cppfiles/1005.cpp)|Spell it Right(20)|数值的字符串处理|
@@ -34,7 +35,9 @@
 |[1027](PAT_Bundles/1027.md)|Colors in Mars(20)|进制转换|
 |[1030](PAT_Bundles/1030.md)|Travel Plan(30)|图论，最短路径，Dijkstra算法，DFS算法|
 |[1036](PAT_Bundles/1036.md)|Boys vs Girls(20)|排序，结构体，字符串，vector|
+|[1041](PAT_Bundles/1041.md)|Be Unique(20)|Hash散列|
 |[1042](PAT_Bundles/1042.md)|Shuffling Machine(20)|花色变换，数字处理|
+|[1048](PAT_Bundles/1048.md)|Find Coins(25)|Hash散列|
 |[1050](PAT_Bundles/1050.md)|String Substraction(20)|字符串处理，Hash散列|
 |[1053](PAT_Bundles/1053.md)|Path of Equal Weight(30)|树的遍历，DFS并输出，vector|
 |[1056](PAT_Bundles/1056.md)|Mice and Rice(25)|queue应用|

@@ -1,28 +1,24 @@
 #include <iostream>
-#include <cstring>
+#include <string.h>
 using namespace std;
+string s1, s2;
+int visit[128] = {0};
 int main() {
-  string a, b;
-  int lena, lenb;
-  cin >> a;
-  cin >> b;
-  lena = a.length();
-  lenb = b.length();
+  getline(cin, s1);
+  getline(cin, s2);
+  for(int i = 0; i < s1.length(); i++)
+    visit[int(s1[i])]++;
+  for(int i = 0; i < s2.length(); i++)
+    visit[int(s2[i])]--;
   int count = 0;
-  for(int i = 0; i < lenb; i++) {
-    for(int j = 0; j < lena; j++) {
-      if(b[i] == a[j]) {
-        a[j] = '#';
-        count++;
-        break;
-      }
+  for(int i = 0; i < 128; i++) {
+    if(visit[i] < 0) {
+      count += visit[i] * (-1);
     }
   }
-  int result = lenb - count;
-  if(result == 0) {
-    printf("Yes %d", lena - lenb);
-  } else {
-    printf("No %d", result);
-  }
+  if(count == 0)
+    printf("Yes %d", s1.length() - s2.length());
+  else
+    printf("No %d", count);
   return 0;
 }
