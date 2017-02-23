@@ -5,6 +5,7 @@
 + [set用法](set_c++.md)
 + [vector](vector_c++.md)
 + [cin](cin_c++.md)
++ [字符串string](string_c++.md)
 
 ## PAT甲级训练集
 
@@ -37,6 +38,7 @@
 |[1036](PAT_Bundles/1036.md)|Boys vs Girls(20)|排序，结构体，字符串，vector|
 |[1041](PAT_Bundles/1041.md)|Be Unique(20)|Hash散列|
 |[1042](PAT_Bundles/1042.md)|Shuffling Machine(20)|花色变换，数字处理|
+|[1046](PAT_Bundles/1046.md)|Shortest Distence(20)|模拟
 |[1048](PAT_Bundles/1048.md)|Find Coins(25)|Hash散列|
 |[1050](PAT_Bundles/1050.md)|String Substraction(20)|字符串处理，Hash散列|
 |[1053](PAT_Bundles/1053.md)|Path of Equal Weight(30)|树的遍历，DFS并输出，vector|
@@ -52,9 +54,12 @@
 |[1086](PAT_Bundles/1086.md)|Tree Traversals Again(25)|二叉树的遍历，栈的应用|
 |[1092](PAT_Bundles/1092.md)|To Buy or Not to Buy(20)|字符串处理，string应用|
 |[1094](PAT_Bundles/1094.md)|The Largest Generation(25)|树的遍历，DFS|
+|[1098](PAT_Bundles/1098.md)|Insertion or Heap Sort(25)|插入排序，堆排序|
 |[1099](PAT_Bundles/1099.md)|Build A Binary Search Tree(30)|二叉搜索树，值序(左<根<右),中序遍历|
+|[1100](PAT_Bundles/1100.md)|Mar Numbers(20)|字符串处理，map|
 |[1101](PAT_Bundles/1101.md)|Quick Sort(25)|快速排序，结果逆向考虑|
 |[1102](PAT_Bundles/1102.md)|Invert a Binary Tree(25)|树的遍历，队列广度优先搜索，中序序列处理|
+|[1103](PAT_Bundles/1103.md)|Integer Factorization(30)|深度优先搜索的变形|
 |[1104](PAT_Bundles/1104.md)|Sum of Number Segments(20)|子序列求和，数学问题|
 |[1105](PAT_Bundles/1105.md)|Spiral Matrix(25)|模拟过程，螺旋矩阵|
 |[1106](PAT_Bundles/1106.md)|Lowest Price in Supply Chain(25)|树的遍历，深度优先搜索，最小深度值|
