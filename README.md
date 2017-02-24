@@ -34,8 +34,11 @@
 |[1019](PAT_Bundles/1019.md)|General Palindromic Number(20)|一般回文数，数学问题|
 |[1020](PAT_Bundles/1020.md)|Tree Traversals(25)|二叉树的遍历，前序/后序/中序/层序|
 |[1021](PAT_Bundles/1021.md)|Deepest Root(25)|图论，连通分量，深度优先搜索|
+|[1023](PAT_Bundles/1023.md)|Have Fun with Numbers(20)|长整型数字处理，字符串处理|
 |[1025](PAT_Bundles/1025.md)|PAT Ranking(25)|vector应用，排序|
 |[1027](PAT_Bundles/1027.md)|Colors in Mars(20)|进制转换|
+|[1028](PAT_Bundles/1028.md)|List Sorting(25)|排序，字符|
+|[1029](PAT_Bundles/1029.md)|Median(25)|中位数，位移|
 |[1030](PAT_Bundles/1030.md)|Travel Plan(30)|图论，最短路径，Dijkstra算法，DFS算法|
 |[1036](PAT_Bundles/1036.md)|Boys vs Girls(20)|排序，结构体，字符串，vector|
 |[1041](PAT_Bundles/1041.md)|Be Unique(20)|Hash散列|
@@ -65,14 +68,19 @@
 |[1104](PAT_Bundles/1104.md)|Sum of Number Segments(20)|子序列求和，数学问题|
 |[1105](PAT_Bundles/1105.md)|Spiral Matrix(25)|模拟过程，螺旋矩阵|
 |[1106](PAT_Bundles/1106.md)|Lowest Price in Supply Chain(25)|树的遍历，深度优先搜索，最小深度值|
+|[1107](PAT_Bundles/1107.md)|Social Clusters(30)|并查集|
 |[1108](PAT_Bundles/1108.md)|Finding Average(20)|字符串处理，sscanf,sprintf|
+|[1109](PAT_Bundles/1109.md)|Group Photo(25)|排序，逻辑题|
 |[1110](PAT_Bundles/1110.md)|Complete Binary Tree(25)|完全二叉树，广度优先搜索，queue应用|
+|[1112](PAT_Bundles/1112.md)|Stucked Keyboard(20)|map映射|
 |[1113](PAT_Bundles/1113.md)|Integer Set Partition(25)|排序，求和|
 |[1114](PAT_Bundles/1114.md)|Family Property(25)|并查集|
 |[1115](PAT_Bundles/1115.md)|Counting Nodes in a BST(30)|二叉搜索树，深度优先遍历，递归构建|
 |[1116](PAT_Bundles/1116.md)|Come on! Let's C(20)|set的应用，素数判断|
+|[1117](PAT_Bundles/1117.md)|Eddington Numbers(25)|简单逻辑题|
 |[1118](PAT_Bundles/1118.md)|Birds in Forest(25)|并查集，数组的应用|
 |[1119](PAT_Bundles/1119.md)|Pre- and Post-order Traversal|前序后序转中序|
 |[1120](PAT_Bundles/1120.md)|Friend Numbers(20)|数字问题，位求和，set应用|
 |[1121](PAT_Bundles/1121.md)|Damn Single(25)|set的应用|
+|[1122](PAT_Bundles/1122.md)|Hamiltonian Cycle(25)|图论，邻接矩阵，一个连通分量|
 |[1123](PAT_Bundles/1123.md)|Is it a Complete AVL Tree(30)|AVL树，平衡二叉搜索树，层序遍历，旋转|
