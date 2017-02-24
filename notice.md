@@ -1,5 +1,9 @@
 ## 知识点总结
 
+### review
+
+
+
 ### 1)数据存储
 
 19 5  
@@ -18,12 +22,21 @@ sort函数：对指定区间的所有元素进行排序。结合vector使用，�
 #include <algorithm>
 #include <vector>
 using namespace std;
+struct node {
+  int a, b;
+}
 bool cmp1(int a, int b) {
   return a > b;  //降序   return a < b则为升序
 }
-
+bool cmp2(node a, node b) {
+  if(a.a != b.a)
+    return a.a < b.a;
+  else
+    return a.b < b.b;
+}
 sort(begin, end)
 sort(begin, end, cmp)
+```
 
 ### 4)图的遍历，比较 **前序和中序转后序** 与 **后序和中序转前序** 的区别
 

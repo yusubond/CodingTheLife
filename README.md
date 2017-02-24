@@ -59,6 +59,7 @@
 |[1086](PAT_Bundles/1086.md)|Tree Traversals Again(25)|二叉树的遍历，栈的应用|
 |[1092](PAT_Bundles/1092.md)|To Buy or Not to Buy(20)|字符串处理，string应用|
 |[1094](PAT_Bundles/1094.md)|The Largest Generation(25)|树的遍历，DFS|
+|[1097](PAT_Bundles/1097.md)|Deduplication on a Linked List(25)|排序，链表|
 |[1098](PAT_Bundles/1098.md)|Insertion or Heap Sort(25)|插入排序，堆排序|
 |[1099](PAT_Bundles/1099.md)|Build A Binary Search Tree(30)|二叉搜索树，值序(左<根<右),中序遍历|
 |[1100](PAT_Bundles/1100.md)|Mar Numbers(20)|字符串处理，map|
