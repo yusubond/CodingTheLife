@@ -33,6 +33,8 @@
 |[1018](PAT_Bundles/1018.md)|Public Bike Management(25)|最短路径问题，Dijkstra算法，DFS算法|
 |[1019](PAT_Bundles/1019.md)|General Palindromic Number(20)|一般回文数，数学问题|
 |[1020](PAT_Bundles/1020.md)|Tree Traversals(25)|二叉树的遍历，前序/后序/中序/层序|
+|[1021](PAT_Bundles/1021.md)|Deepest Root(25)|图论，连通分量，深度优先搜索|
+|[1025](PAT_Bundles/1025.md)|PAT Ranking(25)|vector应用，排序|
 |[1027](PAT_Bundles/1027.md)|Colors in Mars(20)|进制转换|
 |[1030](PAT_Bundles/1030.md)|Travel Plan(30)|图论，最短路径，Dijkstra算法，DFS算法|
 |[1036](PAT_Bundles/1036.md)|Boys vs Girls(20)|排序，结构体，字符串，vector|
