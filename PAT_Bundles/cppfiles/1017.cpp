@@ -19,7 +19,7 @@ int main() {
     if(m > 60) m = 60;  //当处理时间大于60min时，按60min处理
     int cometime = HH * 3600 + MM * 60 + SS;
     //存储有效数据
-    if(cometime > 61200)
+    if(cometime > 61200)  //超过17:00
       continue;
     tempcustomer.come = cometime;
     tempcustomer.time = m * 60;
