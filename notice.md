@@ -2,7 +2,7 @@
 
 ### review
 
-1094 
+1094,1021,1020,1019,1018
 
 ### 1)数据存储
 
@@ -71,7 +71,7 @@ c++代码：已知后序和中序，转为前序
 ```c++
 #include <vector>
 vector<int> pre, in, post;
-void post2pre(int root, int start, int end) {
+void post2pre(int root, int start, int end, int depth) {
   //root表示子树根节点在后序post中的下标
   //start和end表示子树的最左边和最右边在中序in中的下标
   if(start > end) return ;
@@ -79,14 +79,16 @@ void post2pre(int root, int start, int end) {
   while(i < end && in[i] != post[root]) i++;
   //先压入根节点
   pre.push_back(post[root]);
+  level[depth] = post[root];
   //处理前半段，即左子树：新根为 root-1-(end-i)，起点为 start，终点为 i-1
-  post2pre(root - 1 - end + i, start, i - 1);
+  post2pre(root - 1 - end + i, start, i - 1, depth * 2);
   //处理后半段，即右子树：新根为 root-1，起点为 i+1，终点为 end
-  post2pre(root - 1, i + 1, end);
+  post2pre(root - 1, i + 1, end, depth * 2 + 1);
 }
   //应用
-  post2pre(n - 1, 0, n - 1);
+  post2pre(n - 1, 0, n - 1, 1);  //根节点为1层
   //顺序输出pre，即是前序序列
+  //也是得到层序遍历序列，level需初始化，并选择判断后输出
 ```
 
 ### 5)字符串长度
@@ -231,3 +233,5 @@ void dfs(int v) {  //传入目标结点，即终点
 ```
 
 ### 9）广度优先搜索
+
+在二叉树里面，
