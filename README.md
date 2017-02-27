@@ -21,9 +21,9 @@
 |[1006](PAT_Bundles/cppfiles/1006.cpp)|Sign in and Sign out(25)|元素查找|
 |[1007](PAT_Bundles/cppfiles/1007.cpp)|Emergency(25)|动态规划，最大连续子序列和|
 |[1008](PAT_Bundles/cppfiles/1008.cpp)|Elevator(20)|数学问题|
-|[1009](PAT_Bundles/cppfiles/1009.cpp)|Product of Polynomials(25)|模拟|
-|[1010](PAT_Bundles/cppfiles/1010.cpp)|Radix(25)|模拟|
-|[1011](PAT_Bundles/cppfiles/1011.cpp)|World Cup Betting(20)|模拟|
+|[1009](PAT_Bundles/1009.md||Product of Polynomials(25)|模拟，多项式计算，数组运用|
+|[1010](PAT_Bundles/1010.md)|Radix(25)|基数，二分法|
+|[1011](PAT_Bundles/1011.md)|World Cup Betting(20)|模拟，元素查找|
 |[1012](PAT_Bundles/1012.md)|The Best Rank(25)|数字排序，三门功课，四个排名|
 |[1013](PAT_Bundles/1013.md)|Battle Over Cities(25)|图论，连通分量，dfs|
 |[1014](PAT_Bundles/1014.md)|Waiting in Line(30)|queue的应用，时间问题，排队问题|
