@@ -72,26 +72,26 @@ int main() {
             i++;
             continue;
         }
-        if(table[index].vip == true) {
-            if(player[i].vip == true) {
+        if(table[index].vip == true) {  //vip table
+            if(player[i].vip == true) {  //vip person
                 alloctable(i, index);
                 if(vipid == i)
                     vipid = findnextvip(vipid);
                 i++;
-            } else {
-                if(vipid < player.size() && player[vipid].arrive <= table[index].end) {
+            } else {  //vip table no vip person
+                if(vipid < player.size() && player[vipid].arrive <= table[index].end) {  //vip table. next vip person
                     alloctable(vipid, index);
                     vipid = findnextvip(vipid);
-                } else {
+                } else {  //vip table, i no vip person
                     alloctable(i, index);
                     i++;
                 }
             }
-        } else {
-            if(player[i].vip == false) {
+        } else {   //no vip table
+            if(player[i].vip == false) {  //no vip person
                 alloctable(i, index);
                 i++;
-            } else {
+            } else {  //vip person
                 int vipindex = -1, minvipendtime = 999999999;
                 for(int j = 1; j <= k; j++) {
                     if(table[j].vip == true && table[j].end < minvipendtime) {
@@ -99,13 +99,13 @@ int main() {
                         vipindex = j;
                     }
                 }
-                if(vipindex != -1 && player[i].arrive >= table[vipindex].end) {
+                if(vipindex != -1 && player[i].arrive >= table[vipindex].end) {  //vip person vip table
                     alloctable(i, vipindex);
                     if(vipid == i)
                         vipid = findnextvip(vipid);
                     i++;
                 } else {
-                    alloctable(i, index);
+                    alloctable(i, index);  //vip person, no vip table
                     if(vipid == i)
                         vipid = findnextvip(vipid);
                     i++;
