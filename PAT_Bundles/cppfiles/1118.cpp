@@ -3,26 +3,20 @@ using namespace std;
 int n, m, k;
 const int maxn = 100010;
 int fa[maxn] = {0}, count[maxn] = {0};
+bool exist[maxn];
 int findFather(int x) {
-  int a = x;
-  while(x != fa[x]) {
-    x = fa[x];
-  }
-  while(a != fa[a]) {
-    int z = a;
-    fa[a] = x;
-    a = fa[z];
-  }
-  return x;
+  if(fa[x] == x)
+    return x;
+  else
+    return findFather(fa[x]);
 }
 void Union(int a, int b) {
   int faA = findFather(a);
   int faB = findFather(b);
   if(faA != faB) {
-    fa[faA] = faB;
+    fa[faB] = faA;
   }
 }
-bool exist[maxn];
 int main() {
   scanf("%d", &n);
   for(int i = 1; i <= maxn; i++)
