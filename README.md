@@ -17,11 +17,11 @@
 |[1002](PAT_Bundles/markdownfiles/1002.md)|A+B for Polynomials(25)|**|
 |[1003](PAT_Bundles/markdownfiles/1003.md)|Emergency(25)|图论，求最短路径，Dijkstra搜索|
 |[1004](PAT_Bundles/markdownfiles/1004.md)|Counting Leaves(30)|树的遍历，深度优先与广度优先，DFS,BFS|
-|[1005](PAT_Bundles/markdownfiles/cppfiles/1005.cpp)|Spell it Right(20)|数值的字符串处理|
-|[1006](PAT_Bundles/markdownfiles/cppfiles/1006.cpp)|Sign in and Sign out(25)|元素查找|
-|[1007](PAT_Bundles/markdownfiles/cppfiles/1007.cpp)|Emergency(25)|动态规划，最大连续子序列和|
-|[1008](PAT_Bundles/markdownfiles/cppfiles/1008.cpp)|Elevator(20)|数学问题|
-|[1009](PAT_Bundles/markdownfiles/1009.md||Product of Polynomials(25)|模拟，多项式计算，数组运用|
+|[1005](PAT_Bundles/markdownfiles/1005.md)|Spell it Right(20)|数值的字符串处理|
+|[1006](PAT_Bundles/markdownfiles/1006.md)|Sign in and Sign out(25)|元素查找|
+|[1007](PAT_Bundles/markdownfiles/1007.md)|Emergency(25)|动态规划，最大连续子序列和|
+|[1008](PAT_Bundles/markdownfiles/1008.md)|Elevator(20)|数学问题|
+|[1009](PAT_Bundles/markdownfiles/1009.md)|Product of Polynomials(25)|模拟，多项式计算，数组运用|
 |[1010](PAT_Bundles/markdownfiles/1010.md)|Radix(25)|基数，二分法|
 |[1011](PAT_Bundles/markdownfiles/1011.md)|World Cup Betting(20)|模拟，元素查找|
 |[1012](PAT_Bundles/markdownfiles/1012.md)|The Best Rank(25)|数字排序，三门功课，四个排名|
