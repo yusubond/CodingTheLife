@@ -6,6 +6,7 @@
 + [vector](vector_c++.md)
 + [cin](cin_c++.md)
 + [字符串string](string_c++.md)
++ [文件重定向](freopen_c++.md)
 
 ## PAT甲级训练集
 
