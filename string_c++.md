@@ -12,7 +12,21 @@ strcpy(str1, str2)
 
 ### 2. 头文件cstring`#include<cstring>`
 
+```c++
 string s;
 for(int i = 0; i < s.length(); i++) {
   cout << s[i];
 }
+```
+
+### 3. 头文件cctype`#include<cctype>``
+
+cctype头文件中的函数
+
+isalnum(c): 当c为字母或数字时为真  
+isalpha(c): 当c为字母时为真  
+isdigit(c): 当c为数字时为真  
+islower(c): 当c为小写字母时为真  
+isupper(c): 当c为大小字母时为真  
+tolower(c): 当c是大写字母时，输出对应的小写字母，否则原样输出  
+toupper(c): 当c是小写字母时，输出对应的大写字母，否则原样输出  
