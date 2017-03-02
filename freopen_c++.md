@@ -22,10 +22,10 @@ c语言中，在头文件`#include <stdio.h>`;c++语言中。在头文件`#inclu
 #include <cstdio>
 using namespace std;
 int main() {
-  freopen("d:infile.txt", "r", stdin);
+  freopen("d:\\infile.txt", "r", stdin);
   //其他读入操作，如scanf(), cin
 
-  freopen("d://outfile.txt", "w", stdout);
+  freopen("d:\\outfile.txt", "w", stdout);
   //其他输出操作，如printf(), cout
   return 0;
 }

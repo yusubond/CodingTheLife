@@ -1,9 +1,9 @@
 #include <cstdio>
-#include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-int a[100005], b[100005];
+int a[100010], b[100010];
+vector<int> ans;
 int main() {
   int n;
   scanf("%d", &n);
@@ -12,22 +12,21 @@ int main() {
     b[i] = a[i];
   }
   sort(a, a + n);
-  int v[100005];
-  int max = 0;
-  int count = 0;
+  int temp = -1;
   for(int i = 0; i < n; i++) {
-    if(a[i] == b[i] && b[i] > max) {
-      v[count++] = b[i];
+    if(a[i] == b[i] && temp < a[i]) {
+      temp = a[i];
+      ans.push_back(a[i]);
     }
-    if(max < b[i])  //保证前面的序列的最大值要小于当前值
-      max = b[i];
+    if(b[i] > temp)
+      temp = b[i];
   }
-  printf("%d\n", count);
-  for(int i = 0; i < count; i++) {
+  printf("%lu\n", ans.size());
+  for(int i = 0; i < ans.size(); i++) {
     if(i == 0)
-      printf("%d", v[i]);
+      printf("%d", ans[i]);
     else
-      printf(" %d", v[i]);
+      printf(" %d", ans[i]);
   }
   printf("\n");
   return 0;

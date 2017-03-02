@@ -1,92 +1,62 @@
 #include <cstdio>
 #include <vector>
-#include <map>
-#include <iostream>
-#include <algorithm>
+#include <queue>
 using namespace std;
-int n, k;
-const int inf = 99999999;
-int e[205][205], weight[205], dis[205];
-bool visit[205];
-vector<int> pre[205], temppath, path;
-map<string, int> m;
-map<int, string> m2;
-int maxvalue = 0, mindepth, countpath = 0;
-double maxavg;
-void dfs(int v) {
-  temppath.push_back(v);
-  if(v == 1) {
-    int value = 0;
-    for(int i = 0; i < temppath.size(); i++) {
-      value += weight[temppath[i]];
-    }
-    double tempavg = 1.0 * value / (temppath.size() - 1);
-    if(value > maxvalue) {
-      maxvalue = value;
-      maxavg = tempavg;
-      path = temppath;
-    } else if(value == maxvalue && tempavg > maxavg) {
-      maxavg = tempavg;
-      path = temppath;
-    }
-    temppath.pop_back();
-    countpath++;
-    return ;
+struct node {
+  int left, right;
+};
+vector<node> tree;
+vector<int> in;
+void inorder(int root) {
+  if(tree[root].left == -1 && tree[root].right == -1) {
+    in.push_back(root);
+    return;
   }
-  for(int i = 0; i < pre[v].size(); i++)
-    dfs(pre[v][i]);
-  temppath.pop_back();
+  if(tree[root].left != -1)
+    inorder(tree[root].left);
+  in.push_back(root);
+  if(tree[root].right != -1)
+    inorder(tree[root].right);
 }
 int main() {
-  fill(e[0], e[0] + 205 * 205, inf);
-  fill(dis, dis + 205, inf);
-  fill(visit, visit + 205, false);
-  scanf("%d %d", &n, &k);
-  string s;
-  cin >> s;
-  m[s] = 1;
-  m2[1] = s;
+  int n, root;
+  scanf("%d", &n);getchar();
+  tree.resize(n);
+  vector<int> book(n, 0);
+  for(int i = 0; i < n; i++) {
+    char c1, c2;
+    scanf("%c %c", &c1, &c2);getchar();
+    tree[i].right = (c1 == '-' ? -1 : (c1 - '0'));
+    tree[i].left = (c2 == '-' ? -1 : (c2 - '0'));
+    if(tree[i].left != -1)
+      book[tree[i].left] = 1;
+    if(tree[i].right != -1)
+      book[tree[i].right] = 1;
+  }
+  for(int i = 0; i < n; i++) {
+    if(book[i] == 0) {
+      root = i;
+      break;
+    }
+  }
+  queue<int> q;
+  q.push(root);
+  vector<int> level;
+  while(!q.empty()) {
+    int index = q.front();
+    q.pop();
+    if(tree[index].left != -1)
+      q.push(tree[index].left);
+    if(tree[index].right != -1)
+      q.push(tree[index].right);
+    level.push_back(index);
+  }
+  for(int i = 0; i < n; i++)
+    printf("%d%c", level[i], i == n - 1 ? '\n' : ' ');
+  inorder(root);
+  printf("%d", in[0]);
   for(int i = 1; i < n; i++) {
-    cin >> s >> weight[i + 1];
-    m[s] = i + 1;
-    m2[i + 1] = s;
+    printf(" %d", in[i]);
   }
-  string sa, sb;
-  int temp;
-  for(int i = 0; i < k; i++) {
-    cin >> sa >> sb >> temp;
-    e[m[sa]][m[sb]] = temp;
-    e[m[sb]][m[sa]] = temp;
-  }
-  dis[1] = 0;
-  for(int i = 1; i <= n; i++) {
-    int u = -1, minn = inf;
-    for(int j = 1; j <= n; j++) {
-      if(visit[j] == false && dis[j] < minn) {
-        u = j;
-        minn = dis[j];
-      }
-    }
-    if(u == -1) break;
-    visit[u] = true;
-    for(int v = 1; v <= n; v++) {
-      if(visit[v] == false && e[u][v] != inf) {
-        if(dis[u] + e[u][v] < dis[v]) {
-          dis[v] = dis[u] + e[u][v];
-          pre[v].clear();
-          pre[v].push_back(u);
-        } else if(dis[u] + e[u][v] == dis[v]) {
-          pre[v].push_back(u);
-        }
-      }
-    }
-  }
-  int rom = m["ROM"];
-  dfs(rom);
-  printf("%d %d %d %d\n", countpath, dis[rom], maxvalue, (int)maxavg);
-  for(int i = path.size() - 1; i >= 1; i--) {
-    cout << m2[path[i]] << "->";
-  }
-  cout << "ROM";
   return 0;
 }
