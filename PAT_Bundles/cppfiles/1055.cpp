@@ -18,7 +18,9 @@ bool cmp(node a, node b) {
     return strcmp(a.name, b.name) < 0;
 }
 int n,k;
+vector<int> book(210, 0);
 vector<node> person;
+vector<node> v;
 int main() {
   scanf("%d %d", &n, &k);
   person.resize(n);
@@ -32,13 +34,19 @@ int main() {
     person[i].worth = tempworth;
   }
   sort(person.begin(), person.end(), cmp);
+  for(int i = 0; i < n; i++) {
+    if(book[person[i].age] < 100) {
+      v.push_back(person[i]);
+      book[person[i].age]++;
+    }
+  }
   for(int i = 0; i < k; i++) {
     vector<node> tempk;
     int sum, minage, maxage;
     scanf("%d %d %d", &sum, &minage, &maxage);
     for(int j = 0; j < n; j++) {
-      if(person[j].age >= minage && person[j].age <= maxage) {
-        tempk.push_back(person[j]);
+      if(v[j].age >= minage && v[j].age <= maxage) {
+        tempk.push_back(v[j]);
       }
     }
     sort(tempk.begin(), tempk.end(), cmp);
