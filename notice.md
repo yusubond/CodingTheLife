@@ -31,7 +31,7 @@ for(int i = 1; i <= n; i++) {
 
 `#include <algorithm>`
 
-sort函数：对指定区间的所有元素进行排序。结合vector使用，例如sort(vector.begin(), vector.end(), cmp)。sort函数默认对整型数据进行升序排列。
+sort函数：对指定区间(**左闭合区间**)的所有元素进行排序。结合vector使用，例如sort(vector.begin(), vector.end(), cmp)。sort函数默认对整型数据进行升序排列。
 
 ```c++
 #include <algorithm>
@@ -106,22 +106,7 @@ void post2pre(int root, int start, int end, int depth) {
   //也是得到层序遍历序列，level需初始化，并选择判断后输出
 ```
 
-### 5)字符串长度
-
-对于字符串长度，使用其成员函数输出。需要包含头文件`#include <cstring>`。
-
-```c++
-#include <iostream>
-#include <cstring>
-using namespace std;
-string a;
-cin >> a;
-int lena = a.length();
-```
-
-### 6)递归函数及其思想
-
-### 7)最短路径，Dijkstra算法
+### 6)最短路径，Dijkstra算法
 
 1) 利用容器存放路径信息，并保存在pre数组(其类型为vector<int>)中。**pre[i]** 中i表示当前结点，pre[i]中的值表示前一结点。因为，最短路径可以不唯一，利用vector可以保存多条路径。
 
@@ -253,5 +238,7 @@ void dfs(int v) {  //传入目标结点，即终点
 
 算法fill()可以接收一对迭代器表示一个范围，还可以接收一个值作为第三个参数。fill将把这个值赋予由一对迭代器指定的序列范围(注意，这个范围是左闭合区间[first, last)中的元素。
 
+```c++
 fill(v.begin(), v.end(), 0);
 fill(v.begin(), v.size() / 2, 0);
+```
