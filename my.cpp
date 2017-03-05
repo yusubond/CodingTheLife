@@ -1,37 +1,60 @@
 #include <cstdio>
-#include <cstring>
-#include <iostream>
-#include <string.h>
+#include <algorithm>
 using namespace std;
-int main() {
-  freopen("/Users/subond/Documents/MyLife/PATest/input", "r", stdin);
-  freopen("/Users/subond/Documents/MyLife/PATest/output", "w", stdout);
-  string s;
-  cin >> s;
-  int len = s.length() + 2;
-  int n1, n2, n3;
-  if(len % 3 == 0) {
-    n1 = n2 = n3 = len % 3;
-  } else {
-    n2 = len / 3 + len % 3;
-    n1 = n3 = (len - n2) / 2;
-  }
-  char ans[n1][n2];
-  int t = 0;
-  for(int i = 0; i < n1; i++)
-    for(int j = 0; j < n2; j++)
-      ans[i][j] = ' ';
-  for(int i = 0; i <= n1 - 2; i++)
-    ans[i][0] = s[t++];
-  for(int i = 0; i < n2; i++)
-    ans[n1 - 1][i] = s[t++];
-  for(int i = n1 - 2; i >= 0; i--)
-    ans[i][n2 - 1] = s[t++];
-  for(int i = 0; i < n1; i++)
-    for(int j = 0; j < n2; j++) {
-      printf("%c", ans[i][j]);
-      if(j == n2 -1)
-        printf("\n");
+const int inf = 99999999;
+int n, m;
+int e[505][505];
+bool visit[505];
+int book[505];
+void dfs(int x) {
+  for(int i = 1; i <= n; i++) {
+    if(!visit[i] == false && e[x][i] != inf) {
+      visit[i] = true;
+      dfs(i);
     }
+  }
+}
+int main() {
+  fill(e[0], e[0] + 505 * 505, inf);
+  fill(visit, visit + 505, false);
+  fill(book, book + 505, 0);
+  scanf("%d %d", &n, &m);
+  int a, b, count = 0;
+  for(int i = 0; i < m; i++) {
+    scanf("%d %d", &a, &b);
+    book[a]++;
+    book[b]++;
+    e[a][b] = e[b][a] = 1;
+  }
+  for(int i = 1; i <= n; i++) {
+    if(visit[i] == false) {
+      if(count == 2)
+        break;
+      visit[i] = true;
+      dfs(i);
+      count++;
+    }
+  }
+  int flag = 0;
+  for(int i = 1; i <= n; i++) {
+    if(book[i] % 2 != 0)
+      flag = flag + 1;
+  }
+  for(int i = 1; i <= n; i++) {
+    if(i == 1)
+      printf("%d", book[i]);
+    else
+      printf(" %d", book[i]);
+  }
+  if(count == 2) {
+    printf("\nNon-Eulerian");
+    return 0;
+  }
+  if(flag == 0)
+    printf("\nEulerian");
+  else if(flag == 2)
+    printf("\nSemi-Eulerian");
+  else
+    printf("\nNon-Eulerian");
   return 0;
 }

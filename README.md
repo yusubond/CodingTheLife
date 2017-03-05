@@ -89,3 +89,4 @@
 |[1121](PAT_Bundles/markdownfiles/1121.md)|Damn Single(25)|set的应用|
 |[1122](PAT_Bundles/markdownfiles/1122.md)|Hamiltonian Cycle(25)|图论，邻接矩阵，一个连通分量|
 |[1123](PAT_Bundles/markdownfiles/1123.md)|Is it a Complete AVL Tree(30)|AVL树，平衡二叉搜索树，层序遍历，旋转|
+|[1124](PAT_Bundles/markdownfiles/1124.md)|Raffle for Weibo Followers(20)|查询，set应用|
