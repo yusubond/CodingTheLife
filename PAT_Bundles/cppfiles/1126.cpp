@@ -7,14 +7,10 @@ int e[505][505];
 bool visit[505];
 int book[505];
 void dfs(int x) {
-  if(visit[x] == true) {
-    return ;
-  } else {
-    visit[x] = true;
-    for(int i = 1; i <= n; i++) {
-      if(!visit[i] == false && e[x][i] != inf) {
-        dfs(i);
-      }
+  for(int i = 1; i <= n; i++) {
+    if(!visit[i] == false && e[x][i] != inf) {
+      visit[i] = true;
+      dfs(i);
     }
   }
 }
@@ -31,8 +27,13 @@ int main() {
     e[a][b] = e[b][a] = 1;
   }
   for(int i = 1; i <= n; i++) {
-    count++;
-    dfs(i);
+    if(visit[i] == false) {
+      if(count == 2)
+        break;
+      visit[i] = true;
+      dfs(i);
+      count++;
+    }
   }
   int flag = 0;
   for(int i = 1; i <= n; i++) {
@@ -45,12 +46,15 @@ int main() {
     else
       printf(" %d", book[i]);
   }
-  if(count == 1) {
-    if(flag == 0) printf("\nEulerian");
-    else if(flag == 2) printf("\nSemi-Eulerian");
-    else printf("\nNon-Eulerian");
-  } else {
+  if(count == 2) {
     printf("\nNon-Eulerian");
+    return 0;
   }
+  if(flag == 0)
+    printf("\nEulerian");
+  else if(flag == 2)
+    printf("\nSemi-Eulerian");
+  else
+    printf("\nNon-Eulerian");
   return 0;
 }

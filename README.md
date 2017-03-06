@@ -90,3 +90,6 @@
 |[1122](PAT_Bundles/markdownfiles/1122.md)|Hamiltonian Cycle(25)|图论，邻接矩阵，一个连通分量|
 |[1123](PAT_Bundles/markdownfiles/1123.md)|Is it a Complete AVL Tree(30)|AVL树，平衡二叉搜索树，层序遍历，旋转|
 |[1124](PAT_Bundles/markdownfiles/1124.md)|Raffle for Weibo Followers(20)|查询，set应用|
+|[1125](PAT_Bundles/markdownfiles/1125.md)|Chain the Ropes(25)|排序|
+|[1126](PAT_Bundles/markdownfiles/1126.md)|Eulerian Path(25)|图论，拓扑遍历，连通分量计算|
+|[1127](PAT_Bundles/markdownfiles/1127.md)|ZigZagging on a Tree(30)|层序遍历|
