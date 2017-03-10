@@ -2,16 +2,23 @@
 #include<vector>
 using namespace std;
 vector<int> v;
-//选择排序
-void selectsort(vector<int> &data) {
-  int i, j, least;
-  for(i = 0; i < data.size() - 1; i++) {
-    least = i;
-    for(j = i + 1; j < data.size(); j++) {
-      if(data[j] < data[least])
-        least = j;
-    }
-    swap(data[least], data[i]);
+//快速排序
+int division(vector<int> &data, int low, int high) {
+  int temp = data[low];
+  while(low < high) {
+    while(low < high && data[high] >= temp) high--;
+    data[low] = data[high];
+    while(low < high && data[low] <= temp) low++;
+    data[high] = data[low];
+    data[low] = temp;
+  }
+  return low;
+}
+void quicksort(vector<int> &data, int low, int high) {
+  if(low < high) {
+    int i = division(data, low, high);
+    quicksort(data, low, i - 1);
+    quicksort(data, i + 1, high);
   }
 }
 int main()
@@ -21,7 +28,7 @@ int main()
   v.resize(n);
   for(int i = 0; i < n; i++)
     scanf("%d", &v[i]);
-  selectsort(v);
+  quicksort(v, 0, v.size() - 1);
   for(int i = 0; i < n; i++) {
     if(i == 0)
       printf("%d", v[i]);
