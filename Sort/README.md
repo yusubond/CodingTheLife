@@ -1,0 +1,115 @@
+## 排序算法
+
+### 插入排序：前段序列为有序序列，后段序列为无序序列。其思想为：将后段元素逐一插入到前段有序序列的适当位置。
+
+最差时间复杂度：O(n^2)  
+最优时间复杂度：O(n)  
+平均时间复杂度：O(n^2)  
+稳定性：稳定  
+
+```c++
+void insertsort(vector<int> &data) {
+  for(int i = 1; i < data.size(); i++) {
+    int j = i - 1;
+    int temp = data[i];
+    while(j >= 0 && data[j] > temp) {
+      data[j + 1] = data[j];
+      j--;
+    }
+    data[j + 1] = temp;
+  }
+}
+```
+
+### 选择排序：前段序列为有序序列，后段序列为无序序列。其思想为：选取后段无序序列中的最值，并与无序序列的第一个值交换位置，不断地缩小无序序列长度。
+
+最差时间复杂度：O(n^2)  
+最优时间复杂度：O(n^2)  
+平均时间复杂度：O(n^2)  
+稳定性：不稳定  
+
+```c++
+void selectsort(vector<int> &data) {
+  int i, j, least;
+  for(i = 0; i < data.size() - 1; i++) {
+    least = i;
+    for(j = i + 1; j < data.size(); j++) {
+      if(data[j] < data[least])
+        least = j;
+    }
+    swap(data[i], data[least]);
+  }
+}
+```
+
+### 快速排序：采用分治思想。在待排序序列中选取一个基准值，然后将大于或者小于基准值的元素分别放入两个子序列中，然后对两个子序列进行同样操作。
+
+最差时间复杂度：O(n^2)  
+平均时间复杂度：O(nlogn)  
+
+稳定性：不稳定  
+
+```c++
+int division(vector<int> &data, int low, int high) {
+  int base = data[low];
+  while(low < high) {
+    while(low < high && data[high] >= base) high--;
+    data[low] = data[high];
+    while(low < high && data[low] <= base) low++;
+    data[high] = data[low];
+    data[low] = base;
+  }
+  return low;
+}
+void quicksort(vector<int> &data, int low, int high) {
+  if(low < high) {
+    int mid = division(data, low, high);
+    quicksort(data, low, i - 1);
+    quicksort(data, i + 1, high);
+  }
+}
+```
+
+### 堆排序
+
+堆排序采用的是二叉树结构，根据父节点与子节点的大小关系划分为最大堆和最小堆。虽然，其使用二叉树，但是在存储数据时，却使用数组的形式(下标i为父节点，子节点为2 * 1 + 1, 2 * i + 2)，因此处理起来也相对容易。
+
+因为，每次建堆均将数据放到数组的尾部，所以，每次插入新的数据后需要 **上调** 数据。
+
+```c++
+void MinHeapFixup(int a[], int i) {
+  int j = (i - 1) / 2;
+  int temp = a[i];
+  while(j >= 0 && i != 0) {
+    if(a[j] <= temp)
+      break;
+    a[i] = a[j];
+    i = j;
+    j = (i - 1) / 2;
+  }
+  a[i] = temp;
+}
+//建堆
+void MinHeapInsert(int a[], int n, int num) {
+  a[n] = num;
+  MinHeapFixup(a, n);
+}
+```
+
+因为，每次删除数据均是从顶部删除，所以，删除后需要将尾部元素放入顶部，再进行数据 **下调**。
+
+```c++
+void MinHeapFixDown(int a[], int i, int n) {
+  int j = 2 * i + 1;
+  int temp = a[i];
+  while(j < n) {
+    if(j + 1 < n && a[j + 1] < a[j]) j++;
+    if(temp <= a[j])
+      break;
+    a[i] = a[j];
+    i = j;
+    j = 2 * i + 1;
+  }
+  a[i] = temp;
+}
+```
