@@ -9,6 +9,8 @@
 平均时间复杂度：O(n^2)  
 稳定性：稳定  
 
+程序：[插入排序](insertsort.cpp)
+
 ```c++
 void insertsort(vector<int> &data) {
   for(int i = 1; i < data.size(); i++) {
@@ -32,6 +34,8 @@ void insertsort(vector<int> &data) {
 平均时间复杂度：O(n^2)  
 稳定性：不稳定  
 
+程序：[选择排序](selectsort.cpp)
+
 ```c++
 void selectsort(vector<int> &data) {
   int i, j, least;
@@ -54,6 +58,8 @@ void selectsort(vector<int> &data) {
 平均时间复杂度：O(nlogn)  
 
 稳定性：不稳定  
+
+程序：[快速排序](quicksort.cpp)
 
 ```c++
 int division(vector<int> &data, int low, int high) {
@@ -122,3 +128,7 @@ void MinHeapFixDown(int a[], int i, int n) {
   a[i] = temp;
 }
 ```
+
+### #5归并排序
+
+其思想是：采用分治算法。先比较前后两个元素，形成有序序列；然后，对若干个有序序列进行排序。  
