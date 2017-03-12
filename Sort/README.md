@@ -131,4 +131,56 @@ void MinHeapFixDown(int a[], int i, int n) {
 
 ### #5归并排序
 
-其思想是：采用分治算法。先比较前后两个元素，形成有序序列；然后，对若干个有序序列进行排序。  
+其思想是：采用分治算法。先比较前后两个元素，形成有序序列；然后，对若干个有序序列进行排序。**递归思想**
+
+```c++
+//第一步：合并有序序列
+void mergedata(vector<int> &data, int first, int mid, int last) {
+  int i = first, j = mid + 1;
+  vector<int> temp;
+  while(i <= mid && j <= last) {
+    if(data[i] <= data[j])
+      temp.push_back(data[i++]);
+    else
+      temp.push_back(data[j++]);
+  }
+  while(i <= mid)
+    temp.push_back(data[i++]);
+  while(j <= last)
+    temp.push_back(data[j++]);
+  for(int k = 0; k < temp.size(); k++)
+    data[first + k] = temp[k];
+  return;
+}
+//第二步：切分数据，形成若干个子序列
+void mergesort(vector<int> &data, int first, int last) {
+  if(first < last) {
+    int mid = (first + last) / 2;
+    mergesort(data, first, mid);
+    mergesort(data, mid + 1, last);
+    mergedata(data, first, mid, last);
+  }
+  return;
+}
+```
+
+### #6桶排序
+
+其思想是：根据待排序列的取值范围，生成可以一个包含所有元素的数组，对每个元素出现的次数(用元素值作为新数组的下标)。这样，新数组便存储了排序序列。
+
+```c++
+void bucketsort(vector<int> &data, int maxnum) {
+  vector<int> temp(maxnum + 1);
+  fill(temp.begin(), temp.end(), 0);
+  for(int i = 0; i < data.size(); i++) {
+    temp[data[i]]++;
+  }
+  int k = 0;
+  for(int i = 0; i <= maxnum; i++) {
+    while(temp[i] > 0) {
+      data[k++] = i;
+      temp[i]--;
+    }
+  }
+}
+```

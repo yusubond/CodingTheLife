@@ -17,6 +17,7 @@ void mergedata(vector<int> &data, int first, int mid, int last) {
     temp.push_back(data[j++]);
   for(int k = 0; k < temp.size(); k++)
     data[first + k] = temp[k];
+  return;
 }
 void mergesort(vector<int> &data, int first, int last) {
   if(first < last) {
@@ -25,6 +26,7 @@ void mergesort(vector<int> &data, int first, int last) {
     mergesort(data, mid + 1, last);
     mergedata(data, first, mid, last);
   }
+  return;
 }
 int main()
 {
