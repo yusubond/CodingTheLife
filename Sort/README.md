@@ -80,8 +80,8 @@ void quicksort(vector<int> &data, int low, int high) {
 
 堆排序采用的是二叉树结构，根据父节点与子节点的大小关系划分为最大堆和最小堆。虽然，其使用二叉树，但是在存储数据时，却使用数组的形式(下标i为父节点，子节点为2 * 1 + 1, 2 * i + 2)，因此处理起来也相对容易。
 
-[最大堆](maxheapsort.cpp)
-[最小堆](minheapsort.cpp)
+程序：[最大堆](maxheapsort.cpp)  
+程序：[最小堆](minheapsort.cpp)
 
 因为，每次建堆均将数据插入到数组的尾部，所以，每次 **插入新的数据** 后需要 **上调** 数据。
 
