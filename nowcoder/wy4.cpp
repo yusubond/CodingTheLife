@@ -1,12 +1,25 @@
+/*
+* Author: subond
+* Time: 2017-3-17
+* 题意：计算暗黑字符串的个数
+*/
+
 #include <cstdio>
-#include <cmath>
 using namespace std;
-int num;
+long long int total(int num) {
+  if(num == 0)
+    return 0;
+  else if(num == 1)
+    return 3;
+  else if(num == 2)
+    return 9;
+  else
+    return  2 * total(num - 1) + total(num - 2);
+
+}
 int main() {
-  scanf("%d", &num);
-  int total = pow(3, num);
-  int ok = 0;
-  for(int i = )
-  printf("%d", count);
+  int num;
+  while(scanf("%d", &num) == 1)
+    printf("%lld\n", total(num));
   return 0;
 }
