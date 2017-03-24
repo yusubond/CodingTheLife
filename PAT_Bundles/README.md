@@ -53,8 +53,14 @@
 |[1058](./markdownfiles/1058.md)|A + B in Hogwarts(20)|数学问题，进位|
 |[1066](./markdownfiles/1066.md)|Root of AVL Tree(25)|二叉搜索树的建立，旋转以及获取深度|
 |[1070](./markdownfiles/1070.md)|mooncake(25)|贪婪算法|
+|[1073](./markdownfiles/1073.md)|Scientific Notation(20)|字符串处理|
 |[1074](./markdownfiles/1074.md)|Reversing Linked List(25)|链表，固定长度重新排序|
 |[1075](./markdownfiles/1075.md)|PAT Judge(25)|排序|
+|[1076](./markdownfiles/1076.md)|Forwards on Weibo(30)|图的遍历，BFS|
+|[1077](./markdownfiles/1077.md)|Kuchiguse(20)|字符串处理|
+|[1078](./markdownfiles/1078.md)|Hashing(25)|二分法|
+|[1079](./markdownfiles/1079.md)|Total Sales of Supply Chain(25)|树的遍历|
+|[1080](./markdownfiles/1080.md)|Graduate Admission(30)|排序|
 |[1081](./markdownfiles/1081.md)|Rational Sum(20)|分数的四则运算，最大公约数，约分|
 |[1082](./markdownfiles/1082.md)|Read Number in Chinese(25)|数学问题|
 |[1083](./markdownfiles/1083.md)|List Grades(25)|排序,vector应用，char处理|
