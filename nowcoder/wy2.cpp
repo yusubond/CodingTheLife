@@ -1,7 +1,7 @@
 /*
 * Author: subond
 * Time: 2017-3-16
-* 题意：给定一个半径的平方，求圆上坐标为整数的点的个数
+* Question：给定一个半径的平方，求圆上坐标为整数的点的个数
 *
 */
 #include <cstdio>
@@ -16,12 +16,12 @@ int main() {
   scanf("%d", &n);
   int num = n / 2;
   int i = 0;
-  while(i * i <= n) {
-    s.insert(i * i);
+  while(pow(i, 2) <= n) {
+    s.insert(pow(i, 2));
     i++;
   }
-  for(int j = 0; j * j <= num; j++) {
-    if(s.find(n - j * j) != s.end()) {
+  for(int j = 0; pow(j, 2) <= num; j++) {
+    if(s.find(n - pow(j, 2)) != s.end()) {
       result.push_back(j);
     }
   }
@@ -30,7 +30,7 @@ int main() {
     count = 0;
   } else {
     for(int i = 0; i < result.size(); i++) {
-      if(result[i] == 0 || result[i] * result[i] * 2 == n)
+      if(result[i] == 0 || 2 * pow(result[i], 2) == n)
         count += 4;
       else
         count += 8;

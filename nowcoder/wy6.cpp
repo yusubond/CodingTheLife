@@ -1,3 +1,8 @@
+/*
+* Author: subond
+* Time: 2017-03-16
+* Problem: 求最大的奇数约数的和f(n) + f(n-1) + ... + f(1)
+ */
 #include <iostream>
 using namespace std;
 long long int getnum(long long int x) {

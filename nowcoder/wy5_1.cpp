@@ -8,7 +8,7 @@
 #include <cstring>
 #include <iostream>
 using namespace std;
-int flag2 = 0, flag3 = 0;
+int flag2 = 0, flag3 = 0, flag4 = 0;
 int num = 0, flag = 0, i = 0, j = 0;
 int str2num(string s1, string s2) {
   int len1 = s1.length();
@@ -38,8 +38,13 @@ int str2num(string s1, string s2) {
   while(i < len1) {
     temp = (s1[i] - '0') + flag2;
     num = num * 10 + temp % 10;
-    if(temp > 9)
+    if(temp > 9) {
+      if(i == len1 - 1)
+        flag4 = 1;
+      else
+        flag4 = 0;
       flag2 = 1;
+    }
     else
       flag = 0;
     i++;
@@ -47,8 +52,13 @@ int str2num(string s1, string s2) {
   while(j < len2) {
     temp = (s2[j] - '0') + flag2;
     num = num * 10 + temp % 10;
-    if(temp > 9)
+    if(temp > 9) {
+      if(j == len2 - 1)
+        flag4 = 1;
+      else
+        flag4 = 0;
       flag2 = 1;
+    }
     else
       flag2 = 0;
     j++;
@@ -60,6 +70,8 @@ int main() {
   cin >> s1 >> s2;
   cout << str2num(s1, s2);
   if(flag3 == 1)
+    cout << "1";
+  if(flag4 == 1)
     cout << "1";
   return 0;
 }
