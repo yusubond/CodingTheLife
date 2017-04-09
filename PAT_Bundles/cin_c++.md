@@ -1,4 +1,6 @@
-## C++中cin, cin.get(), cin.getline(), getline(), gets()等用法
+## 输入输出流
+
+C++中常见的输入流包括cin, cin.get(), cin.getline(), getline(), gets()，以下是它们的基本用法：
 
 ### 1. cin >>
 
@@ -12,9 +14,10 @@
 #include <iostream>
 using namespace std;
 int main() {
-  char a[20];
-  cin >> a;
-  cout << a << endl;
+  string word;
+  while(cin >> word) {
+    cout << a << endl;
+  }
   return 0;
 }
 ```
@@ -64,17 +67,19 @@ int main() {
 
 例如，cin.getline(m, 10, 'a');  //当遇到'a'时，结束接收，即只接收'a'之前的字符
 
-### 4. getline():接收一个字符串，可以接收空格并输出，需使用头文件 #include<string.h>
+### 4. getline():是一个函数，可以接收一个字符串，也可以接收空格并输出。
+
+**注意**：c++中有两个getline()函数，一个是在string头文件中，定义的是一个全局的函数，函数声明是istream& getline ( istream& is, string& str, char delim )与istream& getline ( istream& is, string& str )；另一个则是istream的成员函数，函数声明是istream& getline (char* s, streamsize n )与istream& getline (char*s, streamsize n, char delim )。第二个getline是将读取的字符串存储在char数组中而不可以将该参数声明为string类型，因为C++编译器无法执行此默认转换。
+
+头文件string中的getline()函数从给定的输入流中读取内容，直到遇到换行符为止(注意换行符也被读进来了)，然后将所读内容存入string对象中(注意不存换行符)。
 
 ```c++
 #include <iostream>
-#include <string.h>
+#include <string>
 using namespace std;
 int main() {
-  string s1;
-  getline(cin, s1);
-  cout << s1 << endl;
+  string line;
+  while(getline(cin, line))
+    cout << s1 << endl;
 }
 ```
-
-**注意**：cin.getline()属于istream流，而getline()属于string流，这两个是不一样的函数。
