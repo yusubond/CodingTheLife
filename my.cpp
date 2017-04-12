@@ -1,14 +1,11 @@
-#include <cstdio>
+#include <iostream>
+#include <vector>
 using namespace std;
-class su {
-  int a;
-  char *p;
-};
-class susu {};
 int main() {
-  printf("%lu\n", sizeof(su));
-  printf("%lu\n", sizeof(char*));
-  printf("%lu\n", sizeof(int));
-  printf("%lu\n", sizeof(susu));
+  vector<int> v;
+  for(int i = 0; i < 10; i++)
+    v.push_back(i * i);
+  for(vector<int>::iterator it = v.begin(); it != v.end(); it++)
+    cout << *it;
   return 0;
 }
