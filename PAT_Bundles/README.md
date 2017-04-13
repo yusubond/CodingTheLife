@@ -1,13 +1,13 @@
 # PAT训练集
 
 + [知识点总结](notice.md)
-+ [set用法](set_c++.md)
-+ [vector](vector_c++.md)
-+ [cin](cin_c++.md)
-+ [字符串string](string_c++.md)
-+ [文件重定向](freopen_c++.md)
-+ [map](map_c++md)
-+ [tree](tree_c++.md)
++ [数组](c++_array.md)
++ [vector](c++_vector.md)
++ [string](c++_string.md)
++ [map](c++_map.md)
++ [set](c++_set.md)
++ [tree](c++_tree.md)
++ [文件重定向](c++_file.md)
 
 ## PAT甲级训练集
 

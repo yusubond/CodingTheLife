@@ -1,4 +1,4 @@
-## 数组相关
+## 数组
 
 ### 1. 二维数组中的查找
 
@@ -183,6 +183,33 @@ public:
             num[i] = num[i - 1] + num[i - 2];
         }
         return num[number];
+    }
+};
+```
+
+### 9. 构建乘积数组
+
+题目：给定一个数组A[0,1,...,n-1],请构建一个数组B[0,1,...,n-1],其中B中的元素B[i]=A[0]*A[1]*...*A[i-1]*A[i+1]*...*A[n-1]。不能使用除法。
+
+```
+class Solution {
+public:
+    vector<int> multiply(const vector<int>& A) {
+    	vector<int> B(A.size());
+        for(int i = 0; i < A.size(); i++) {
+            int j = 0;
+            int temp = 1;
+            while(j < A.size()) {
+                if(j == i)
+                    j++;
+                else {
+                	temp *= A[j];
+                    j++;
+                }
+            }
+            B[i] = temp;
+        }
+        return B;
     }
 };
 ```

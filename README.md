@@ -16,5 +16,7 @@
 * [数据结构](DataStructures/README.md)
 
 * [《剑指Offer》](Offer/README.md)
+   + [数组](Offer/Array.md)
+   + [链表](Offer/List.md)
 
 * [面经](Interview/README.md)
