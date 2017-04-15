@@ -157,30 +157,71 @@ public:
 };
 ```
 
-### 10. 数组中重复的数字
+### 5. 重建二叉树
 
-题目：在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是重复的数字2或者3。
+题目：输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。
 
 ```
+/**
+ * Definition for binary tree
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    // Parameters:
-    //        numbers:     an array of integers
-    //        length:      the length of array numbers
-    //        duplication: (Output) the duplicated number in the array number
-    // Return value:       true if the input is valid, and there are some duplications in the array number
-    //                     otherwise false
-    bool duplicate(int numbers[], int length, int* duplication) {
-        set<int> s;
-        for(int i = 0; i < length; i++) {
-            if(s.find(numbers[i]) == s.end())
-                s.insert(numbers[i]);
-           	else {
-                *duplication = numbers[i];
-                return true;
-            }
-        }
-        return false;
+    TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin) {
+		int n = pre.size() - 1;
+        if(n == 0)
+            return NULL;
+        return PreIn(pre, vin, 0, 0, n);
+    }
+private:
+    TreeNode* PreIn(vector<int> pre, vector<int> in, int preroot, int instart, int inend) {
+        if(instart > inend)
+            return NULL;
+        TreeNode* root = new TreeNode(pre[preroot]);
+        int i = instart;
+        while(i < inend && in[i] != pre[preroot]) i++;
+        root->left = PreIn(pre, in, preroot + 1, instart, i - 1);
+        root->right = PreIn(pre, in, preroot + 1 + i - instart, i + 1, inend);
+        return root;
+    }
+};
+```
+
+### 6. 二叉树的深度
+
+题目：输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。
+
+题解：
+
+1）只有一个结点，深度为1；  
+2）只有左子树，深度为左子树深度+1；同理，右子树也是这样；  
+3）既有左子树也有右子树，则深度为左右子树深度的最大值+1；  
+
+```
+/*
+struct TreeNode {
+	int val;
+	struct TreeNode *left;
+	struct TreeNode *right;
+	TreeNode(int x) :
+			val(x), left(NULL), right(NULL) {
+	}
+};*/
+class Solution {
+public:
+    int TreeDepth(TreeNode* pRoot)
+    {
+        if(pRoot == NULL)
+            return 0;
+        int left = TreeDepth(pRoot->left);
+        int right = TreeDepth(pRoot->right);
+        return left > right ? left + 1 : right + 1;
     }
 };
 ```
