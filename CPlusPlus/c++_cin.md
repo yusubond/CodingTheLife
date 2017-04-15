@@ -69,7 +69,22 @@ int main() {
 
 ### 4. getline():是一个函数，可以接收一个字符串，也可以接收空格并输出。
 
-**注意**：c++中有两个getline()函数，一个是在string头文件中，定义的是一个全局的函数，函数声明是istream& getline ( istream& is, string& str, char delim )与istream& getline ( istream& is, string& str )；另一个则是istream的成员函数，函数声明是istream& getline (char* s, streamsize n )与istream& getline (char*s, streamsize n, char delim )。第二个getline是将读取的字符串存储在char数组中而不可以将该参数声明为string类型，因为C++编译器无法执行此默认转换。
+**注意**：c++中有两个getline()函数，一个是在string头文件中，定义的是一个全局的函数，函数声明是
+```
+istream& getline (istream& is, string& str, char delim )
+与
+istream& getline ( istream& is, string& str )
+```
+
+另一个则是istream的成员函数，函数声明是
+
+```
+istream& getline (char* s, streamsize n )
+与
+istream& getline (char*s, streamsize n, char delim )
+```
+
+第二个getline是将读取的字符串存储在char数组中而不可以将该参数声明为string类型，因为C++编译器无法执行此默认转换。
 
 头文件string中的getline()函数从给定的输入流中读取内容，直到遇到换行符为止(注意换行符也被读进来了)，然后将所读内容存入string对象中(注意不存换行符)。
 
