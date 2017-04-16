@@ -16,6 +16,7 @@
 * [排序算法](Sort/README.md)
 
 * [数据结构](DataStructures/README.md)
+   + [链表](DataStructures/List.md)
 
 * [《剑指Offer》](Offer/README.md)
    + [数组](Offer/Array.md)
