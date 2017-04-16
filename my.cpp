@@ -1,17 +1,17 @@
 #include <iostream>
 #include <vector>
+#include <numeric>
+#include <algorithm>
+#include <iterator>
 #include <string>
 using namespace std;
-string res(string &s) {
-  for(int i = 0; i < s.size() / 2; i++)
-    swap(s[i], s[s.size() - 1 - i]);
-  return s;
+int reset(int *i) {
+  *i = *i + 2;
+  return *i;
 }
 int main() {
-  string s;
-  while(cin >> s) {
-    res(s);
-    cout << s << endl;
-  }
+  int j = 2;
+  reset(&j);
+  cout << j << endl;
   return 0;
 }
