@@ -1,23 +1,26 @@
 ## 链表
 
-### 基本数据
+### 基本元素
 
 ```
 struct Node {
   int val;
   Node *next;
-  Node(int x):val(x), next(NULL) {}
 };
 ```
 
 ### 基本操作
+
+链表的基本操作，包括建立，删除，插入，反转，求取长度
 
 1）链表的建立，包括两种：**前序插入** 和 **后序插入**
 
 ```
 /*
 功能：链表的建立
+参数：输入链表头指针，返回链表头指针
 说明：将新元素插入到整个链表的最后面
+第一步，建立新节点；第二步，将新节点加入到链表的尾部
  */
 Node* InsertBack(Node *phead, int value) {
   Node *s;
@@ -38,7 +41,9 @@ Node* InsertBack(Node *phead, int value) {
 }
 /*
 功能：链表的建立
+参数：输入链表头指针，返回链表头指针
 说明：将新元素加入到整个链表的最前面
+第一步，建立新节点；第二步，将新节点指向链表的头指针
  */
 Node *InsertFront(Node *phead, int value) {
   Node *s;
@@ -55,8 +60,9 @@ Node *InsertFront(Node *phead, int value) {
 ```
 /*
 功能：链表的插入
-参数：表头，位置，元素
-说明：当位置存在时，将元素插入到位置的后面；否则插入到整个链表的后面
+参数：链表头指针，匹配元素，新元素
+说明：当匹配元素存在时，将元素插入到位置的后面；否则插入到整个链表的后面
+第一步，建立新节点；第二步，查找匹配元素并插入新元素，无需保存前驱节点
  */
 Node *InsertAfter(Node *phead, int value1, int value2) {
   Node *s, *p;
@@ -83,8 +89,9 @@ Node *InsertAfter(Node *phead, int value1, int value2) {
 }
 /*
 功能：链表的插入
-参数：表头，位置，元素
+参数：表链表头指针，匹配元素，新元素
 说明：当位置存在时，将元素插入到位置的前面；否则，插入到整个链表的后面
+第一步，建立新节点；第二步，查找匹配元素并插入新元素，无需保存前驱节点
  */
 Node *InsertBefore(Node *phead, int value1, int value2) {
   Node *s;
@@ -125,9 +132,12 @@ Node *InsertBefore(Node *phead, int value1, int value2) {
 说明：删除某个元素，若无此元素则不进行任何操作
  */
 Node *Delete(Node *phead, int target) {
-  if(phead->val == target) {
-    Node *ptemp = phead->next;
-    phead->next = NULL;
+  if(phead == NULL) return phead;
+  Node *pNode = phead;
+  if(pNode->val == target) {
+    Node *ptemp = pNode->next;
+    pNode->next = NULL;
+    delete pNode;
     phead = ptemp;
     return phead;
   }
@@ -143,6 +153,7 @@ Node *Delete(Node *phead, int target) {
   }
   pPre->next = p->next;
   p->next = NULL;
+  delete p;
   return phead;
 }
 ```
@@ -152,6 +163,7 @@ Node *Delete(Node *phead, int target) {
 ```
 /*
 功能：反转链表
+参数：链表的头指针，返回链表的头指针
  */
 Node *Reverse(Node *phead) {
   Node *pReverseHead = NULL;
@@ -167,19 +179,20 @@ Node *Reverse(Node *phead) {
   return pReverseHead;
 }
 ```
+### 链表排序 (冒泡、选择，插入、快速，归并)
 
-5) 对整型链表元素进行排序
+**插入排序**：直接交换节点
 
 ```
 /*
 功能：插入排序
 参数：传入链表头指针作为参数，返回排序后的头指针
 说明：时间复杂度O(n^2)，空间复杂度O(1)
+第一步：选择插入的位置；第二步：如果在已排序的链表的尾部，则直接加入到尾部，否则，插入到选好的位置。注意：需要保存前驱节点。
  */
 Node *InsertSort(Node *phead) {
   if(phead == NULL || phead->next == NULL) return phead;
-  Node *p = phead->next, *pstart = new Node, *pend = phead;
-  pstart->next = phead;
+  Node *p = phead->next, *pstart = phead, *pend = phead;
   while(p != NULL) {
     Node *ptemp = pstart->next, *pre = pstart;
     while(ptemp != p && p->val >= ptemp->val) {
@@ -195,8 +208,6 @@ Node *InsertSort(Node *phead) {
     }
     p = pend->next;
   }
-  phead = pstart->next;
-  delete pstart;
   return phead;
 }
 ```

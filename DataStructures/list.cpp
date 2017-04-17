@@ -104,9 +104,12 @@ Node *InsertBefore(Node *phead, int value1, int value2) {
 说明：删除某个元素，若无此元素则不进行任何操作
  */
 Node *Delete(Node *phead, int target) {
-  if(phead->val == target) {
-    Node *ptemp = phead->next;
-    phead->next = NULL;
+  if(phead == NULL) return phead;
+  Node *pNode = phead;
+  if(pNode->val == target) {
+    Node *ptemp = pNode->next;
+    pNode->next = NULL;
+    delete pNode;
     phead = ptemp;
     return phead;
   }
@@ -122,10 +125,12 @@ Node *Delete(Node *phead, int target) {
   }
   pPre->next = p->next;
   p->next = NULL;
+  delete p;
   return phead;
 }
 /*
 功能：反转链表
+参数：链表的头指针，返回链表的头指针
  */
 Node *Reverse(Node *phead) {
   Node *pReverseHead = NULL;
@@ -141,14 +146,14 @@ Node *Reverse(Node *phead) {
   return pReverseHead;
 }
 /*
-功能：插入排序(将未排序的节点插入到已排序的序列中）
+功能：插入排序
 参数：传入链表头指针作为参数，返回排序后的头指针
 说明：时间复杂度O(n^2)，空间复杂度O(1)
+第一步：选择插入的位置；第二步：如果在已排序的链表的尾部，则直接加入到尾部，否则，插入到选好的位置。注意：需要保存前驱节点。
  */
 Node *InsertSort(Node *phead) {
   if(phead == NULL || phead->next == NULL) return phead;
-  Node *p = phead->next, *pstart = new Node, *pend = phead;
-  pstart->next = phead;
+  Node *p = phead->next, *pstart = phead, *pend = phead;
   while(p != NULL) {
     Node *ptemp = pstart->next, *pre = pstart;
     while(ptemp != p && p->val >= ptemp->val) {
@@ -164,8 +169,6 @@ Node *InsertSort(Node *phead) {
     }
     p = pend->next;
   }
-  phead = pstart->next;
-  delete pstart;
   return phead;
 }
 /*
