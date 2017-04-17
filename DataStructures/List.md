@@ -3,9 +3,10 @@
 ### 基本数据
 
 ```
-struct node {
+struct Node {
   int val;
-  node *next;
+  Node *next;
+  Node(int x):val(x), next(NULL) {}
 };
 ```
 
@@ -111,6 +112,91 @@ Node *InsertBefore(Node *phead, int value1, int value2) {
     s->next = NULL;
     p->next = s;
   }
+  return phead;
+}
+```
+
+3) 链表的删除
+
+```
+/*
+功能：链表的删除
+参数：表头，元素
+说明：删除某个元素，若无此元素则不进行任何操作
+ */
+Node *Delete(Node *phead, int target) {
+  if(phead->val == target) {
+    Node *ptemp = phead->next;
+    phead->next = NULL;
+    phead = ptemp;
+    return phead;
+  }
+  Node *p = phead->next;
+  Node *pPre = phead;
+  while(p != NULL) {
+    if(p->val == target) {
+      break;
+    } else {
+      pPre = p;
+      p = p->next;
+    }
+  }
+  pPre->next = p->next;
+  p->next = NULL;
+  return phead;
+}
+```
+
+4) 链表的反转
+
+```
+/*
+功能：反转链表
+ */
+Node *Reverse(Node *phead) {
+  Node *pReverseHead = NULL;
+  Node *pNode = phead;
+  Node *pPre = NULL;
+  while(pNode != NULL) {
+    Node *pNext = pNode->next;
+    pNode->next = pPre;
+    pPre = pNode;
+    pNode = pNext;
+  }
+  pReverseHead = pPre;
+  return pReverseHead;
+}
+```
+
+5) 对整型链表元素进行排序
+
+```
+/*
+功能：插入排序
+参数：传入链表头指针作为参数，返回排序后的头指针
+说明：时间复杂度O(n^2)，空间复杂度O(1)
+ */
+Node *InsertSort(Node *phead) {
+  if(phead == NULL || phead->next == NULL) return phead;
+  Node *p = phead->next, *pstart = new Node, *pend = phead;
+  pstart->next = phead;
+  while(p != NULL) {
+    Node *ptemp = pstart->next, *pre = pstart;
+    while(ptemp != p && p->val >= ptemp->val) {
+      ptemp = ptemp->next;
+      pre = pre->next;
+    }
+    if(ptemp == p)
+      pend = p;
+    else {
+      pend->next = p->next;
+      p->next = ptemp;
+      pre->next = p;
+    }
+    p = pend->next;
+  }
+  phead = pstart->next;
+  delete pstart;
   return phead;
 }
 ```
