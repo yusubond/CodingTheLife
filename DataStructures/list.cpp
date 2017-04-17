@@ -237,7 +237,7 @@ Node *merge(Node *phead1, Node *phead2) {
     phead1 = phead1->next;
   } else {
     res = phead2;
-    phead2 = phead2;
+    phead2 = phead2->next;
   }
   p = res;
   while(phead1 != NULL && phead2 != NULL) {
@@ -258,20 +258,16 @@ Node *MergeSort(Node *phead) {
   if(phead == NULL || phead->next == NULL) return phead;
   Node *fast = phead;
   Node *slow = phead;
-  cout << fast->val;
   while(fast->next != NULL && fast->next->next != NULL) {
-    cout << fast->val;
-    cout << slow->val;
     fast = fast->next->next;
     slow = slow->next;
   }
-  cout << slow->val;
   fast = slow;
   slow = slow->next;
   fast->next = NULL;
-  Node *p1 = MergeSort(phead);
-  Node *p2 = MergeSort(slow);
-  return merge(p1, p2);
+  fast = MergeSort(phead);
+  slow = MergeSort(slow);
+  return merge(fast, slow);
 }
 /*
 功能：计算链表长度
@@ -334,6 +330,7 @@ int main() {
   cout << "快速排序(降序)：" << endl;
   headb = QuickSort(headb);
   print(headb);
+  cout << "归并排序：" << endl;
   headb = MergeSort(headb);
   print(headb);
   cout << "Length: " << Length(headr) << endl;
