@@ -141,7 +141,7 @@ Node *Reverse(Node *phead) {
   return pReverseHead;
 }
 /*
-功能：插入排序
+功能：插入排序(将未排序的节点插入到已排序的序列中）
 参数：传入链表头指针作为参数，返回排序后的头指针
 说明：时间复杂度O(n^2)，空间复杂度O(1)
  */
@@ -166,6 +166,29 @@ Node *InsertSort(Node *phead) {
   }
   phead = pstart->next;
   delete pstart;
+  return phead;
+}
+/*
+功能：选择排序(选择未排序序列中的最值，然后放到已排序的最前面或最后面，只交换节点的值)
+参数：输入链表的头指针，返回排序后的头指针
+说明：时间复杂度O(n^2)，空间复杂度O(1)
+ */
+Node *SelectSort(Node *phead) {
+  Node *pstart = phead;
+  Node *pend = pstart;
+  while(pend->next != NULL) {
+    Node *minNode = pend->next;
+    Node *p = minNode->next;
+    while(p != NULL) {
+      if(p->val < minNode->val)
+        minNode = p;
+      p = p->next;
+    }
+    swap(minNode->val, pend->val);
+    pend = pend->next;
+  }
+  //phead = pstart->next;
+  //delete pstart;
   return phead;
 }
 /*
@@ -205,20 +228,27 @@ int main() {
     headb = InsertBack(headb, temp);
     headf = InsertFront(headf, temp);
   }
+  cout << "初始链表：" << endl;
   print(headb);
-  //print(headf);
+  print(headf);
+  cout << "在4的位置上插入12：" << endl;
   headb = InsertAfter(headb, 4, 12);
-  //headf = InsertBefore(headf, 4, 12);
+  headf = InsertBefore(headf, 4, 12);
   print(headb);
-  //print(headf);
+  print(headf);
+  cout << "删除元素3：" << endl;
   headb = Delete(headb, 3);
-  //headf = Delete(headf, 8);
+  headf = Delete(headf, 3);
   print(headb);
+  print(headf);
+  cout << "反转链表：" << endl;
   Node *headr = Reverse(headb);
   print(headr);
+  cout << "插入排序与选择排序：" << endl;
   headr = InsertSort(headr);
+  headf = SelectSort(headf);
   print(headr);
-  //print(headf);
+  print(headf);
   cout << "Length: " << Length(headr) << endl;
   return 0;
 }
