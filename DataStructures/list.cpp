@@ -290,6 +290,7 @@ unsigned Length(Node *phead) {
 说明：各个元素之间用空格隔开，末尾无空格
  */
 void print(Node* phead) {
+  if(phead == NULL) return;
   if(phead != NULL)
     cout << phead->val;
   Node *p = phead->next;

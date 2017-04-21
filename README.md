@@ -17,6 +17,8 @@
 
 * [数据结构](DataStructures/README.md)
    + [链表](DataStructures/List.md)
+   + [链表2](DataStructures/List2.md)
+   + [内存对齐](DataStructures/structsize.md)
 
 * [《剑指Offer》](Offer/README.md)
    + [数组](Offer/Array.md)
