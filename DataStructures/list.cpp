@@ -129,6 +129,10 @@ Node *Delete(Node *phead, int target) {
   return phead;
 }
 /*
+功能：删除链表节点
+输入：链表的头指针，删除的节点
+ */
+/*
 功能：反转链表
 参数：链表的头指针，返回链表的头指针
  */

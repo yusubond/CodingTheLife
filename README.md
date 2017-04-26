@@ -21,7 +21,10 @@
    + [内存对齐](DataStructures/structsize.md)
 
 * [《剑指Offer》](Offer/README.md)
-   + [数组](Offer/Array.md)
-   + [链表](Offer/List.md)
+   + [字符串](Offer/String.md)
+   + [数组类](Offer/Array.md)
+   + [链表类](Offer/List.md)
+   + [位运算](Offer/Bit.md)
+   + [树结构](Offer/Tree.md)
 
 * [面经](Interview/README.md)
