@@ -64,8 +64,8 @@ int division(vector<int> &data, int low, int high) {
 void quicksort(vector<int> &data, int low, int high) {
   if(low < high) {
     int mid = division(data, low, high);
-    quicksort(data, low, i - 1);
-    quicksort(data, i + 1, high);
+    quicksort(data, low, mid - 1);
+    quicksort(data, mid + 1, high);
   }
 }
 ```
