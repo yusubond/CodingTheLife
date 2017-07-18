@@ -1,36 +1,42 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
-int lis(vector<int> data) {
-  int result = -1, temp = 1;
+int LIS(vector<int> data) {
+  vector<int> num(data.size());
+  int res = 1;;
+  fill(num.begin(), num.end(), 1);
   for(int i = 1; i < data.size(); i++) {
-    if(data[i-1] < data[i]) {
-      temp++;
-      if(temp > result)
-        result = temp;
-    } else {
-      temp = 1;
+    for(int j = 0; j < i; j++) {
+      if(data[i] > data[j] && num[i] < num[j] + 1) {
+        num[i] = num[j] + 1;
+        if(num[i] > res)
+          res = num[i];
+      }
     }
+  }
+  return res;
+}
+int LIS2(vector<int> arr, int n) {
+  if(n == 1)
+    return 1;
+  int res, end_n = 1, result;
+  for(int i = 1; i < n; i++) {
+    res = LIS2(arr, i);
+    if(arr[i - 1] < arr[n - 1] && res + 1 > end_n)
+      end_n = res + 1;
+    if(end_n > result)
+      result = end_n;
   }
   return result;
 }
-
 int main() {
-  int n, temp;
+  int n;
   cin >> n;
   vector<int> v(n);
-  for(int i = 0; i < n; i++) {
-    cin >> temp;
-    v[i] = temp;
-  }
-  for(int i = 0; i < v.size(); i++) {
-    if(i == v.size()-1)
-      printf("%d\n", v[i]);
-    else
-      printf("%d ", v[i]);
-  }
-  printf("%d\n", lis(v));
+  for(int i = 0; i < n; i++)
+    cin >> v[i];
+  printf("%d\n", LIS2(v, n));
   return 0;
 }
