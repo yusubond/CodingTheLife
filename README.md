@@ -14,18 +14,9 @@
   + [map](CPlusPlus/c++_map.md)
   + [tree](CPlusPlus/c++_tree.md)
 
-* [排序算法](Sort/README.md)
-
-* [数据结构](DataStructures/README.md)
-   + [链表](DataStructures/List.md)
-   + [链表2](DataStructures/List2.md)
-   + [内存对齐](DataStructures/structsize.md)
-
 * [《剑指Offer》](Offer/README.md)
    + [字符串](Offer/String.md)
    + [数组类](Offer/Array.md)
    + [链表类](Offer/List.md)
    + [位运算](Offer/Bit.md)
    + [树结构](Offer/Tree.md)
-
-* [面经](Interview/README.md)
